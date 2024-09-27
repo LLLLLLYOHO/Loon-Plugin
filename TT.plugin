@@ -1,6 +1,18 @@
+#!name = TT自用补充插件
+#!desc = 此插件是泳宏自用
+#!author = 铁泳
+#!tag = 去广告
+#!system = 
+#!system_version = 
+#!loon_version = 3.2.1(745)
+#!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Advertising.png
+#!date = 2024-09-28 00:04:49
+
+[Rule]
 #  捷停车
 DOMAIN, sytoss-market.oss-cn-shenzhen.aliyuncs.com, REJECT
 
+[Rewrite]
 #票根  启动广告
 ^https?:\/\/pss\.txffp\.com\/piaogen\/images\/launchScreen/ url reject-200
 #票根  首页轮播图, 资讯图片
