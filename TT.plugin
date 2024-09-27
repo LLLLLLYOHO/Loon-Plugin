@@ -1,0 +1,15 @@
+#  捷停车
+DOMAIN, sytoss-market.oss-cn-shenzhen.aliyuncs.com, REJECT
+
+#票根  启动广告
+^https?:\/\/pss\.txffp\.com\/piaogen\/images\/launchScreen/ url reject-200
+#票根  首页轮播图, 资讯图片
+^https:\/\/pss\.txffp\.com\/piaogen\/images\/advert\/.*.(jpg|gif|png) url reject
+#票根  首页中间抽奖图
+^https:\/\/pss\.txffp\.com\/piaogen\/images\/invoiceEmailAdvert\/0f2b2b78353c4831bbab24430d59685c\.png url reject
+^https:\/\/pss\.txffp\.com\/piaogen\/images\/invoiceEmailAdvert\/ee8e954f6d10454692b6e67128e119ed\.png url reject
+#票根  首页中间抽奖跳转链接  - 62578.activity-12.m.duiba.com.cn
+^https:\/\/62578\.activity-12\.m\.duiba\.com\.cn\/autoLogin\/autologin url reject
+
+[MitM]
+hostname = pss.txffp.com, 62578.activity-12.m.duiba.com.cn
