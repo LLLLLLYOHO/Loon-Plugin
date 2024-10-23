@@ -1,5 +1,5 @@
 #!name = 拦截HTTPDNS
-#!desc = 拦截常见的HTTPDNS服务，以确保这些请求都能够在Loon的DNS框架下工作。(禁用字节，防止抖音卡顿)
+#!desc = 拦截常见的HTTPDNS服务，以确保这些请求都能在Loon的DNS框架下工作。(禁用字节，防止抖音卡顿)
 #!openUrl = 
 #!author = 铁泳
 #!tag = DNS
@@ -8,7 +8,7 @@
 #!loon_version = 3.2.3(762)
 #!homepage = https://github.com/luestr/ProxyResource/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/luestr/IconResource/main/Other_icon/120px/HTTPDNS.png
-#!date = 2024-10-13 17:06:44
+#!date = 2024-10-23 15:32:12
 
 [Rule]
 # YY语音
@@ -36,7 +36,7 @@ AND, ((IP-CIDR, 111.225.147.191/32, no-resolve), (DEST-PORT, 6443)), REJECT
 AND, ((IP-CIDR, 111.63.61.101/32, no-resolve), (DEST-PORT, 6443)), REJECT
 AND, ((IP-CIDR, 220.243.141.0/32, no-resolve), (DEST-PORT, 6443)), REJECT
 #AND, ((DOMAIN-KEYWORD, frontier-aweme-), (AND, ((OR, ((DOMAIN-KEYWORD, -ipa.), (DOMAIN-KEYWORD, -ipainner.), (DOMAIN-KEYWORD, -origin.), (DOMAIN-KEYWORD, -ipainner-))), (OR, ((DOMAIN-SUFFIX, snssdk.com), (DOMAIN-SUFFIX, amemv.com)))))), REJECT
-#DOMAIN, frontier-aweme-hl.snssdk.com, REJECT
+DOMAIN, frontier-aweme-hl.snssdk.com, REJECT
 
 # 微信
 DOMAIN, dns.weixin.qq.com, REJECT
@@ -181,8 +181,8 @@ DOMAIN, dig.zjurl.cn, REJECT
 
 # 斗鱼
 DOMAIN, dotserver.douyucdn.cn, REJECT
-^http:\/\/203\.107\.1\.33\/\d+\/ss
-^http:\/\/203\.107\.1\.34\/\d+\/ss
+URL-REGEX, ^http:\/\/203\.107\.1\.33\/\d+\/ss, REJECT
+URL-REGEX, ^http:\/\/203\.107\.1\.34\/\d+\/ss, REJECT
 
 # 金山云
 DOMAIN, hdns.ksyun.com, REJECT
