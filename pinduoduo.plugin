@@ -1,8 +1,8 @@
 #!name = 拼多多
 #!desc = TT自用，移除开屏AD、底栏多多视频、会场入口、聊天页面精选推荐及推广，精简首页和个人中心
-#!author = TT[https://raw.githubusercontent.com/LLLLLLYOHO]
+#!author = TT[https://github.com/LLLLLLYOHO/Loon-Plugin]
 #!icon = https://raw.githubusercontent.com/LLLLLLYOHO/Loon-Icons/refs/heads/main/pinduoduo.png
-#!date = 2024-10-26 22：56
+#!date = 2024-10-26 22：58
 
 [Rule]
 # 拦截HTTPDNS
