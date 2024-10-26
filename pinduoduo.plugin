@@ -1,7 +1,7 @@
 #!name = 拼多多
-#!desc = 自用修
-#!author = ZenmoFeiShi[https://github.com/ZenmoFeiShi], 可莉🅥[https://gitlab.com/lodepuly/vpn_tool], RuCu6[https://github.com/RuCu6]
-#!icon = https://raw.githubusercontent.com/RuCu6/Loon/main/Icons/app/pinduoduo.png
+#!desc = TT自用，移除开屏AD、底栏多多视频、会场入口、聊天页面精选推荐及推广，精简首页和个人中心
+#!author = TT[https://raw.githubusercontent.com/LLLLLLYOHO]
+#!icon = https://raw.githubusercontent.com/LLLLLLYOHO/Loon-Icons/refs/heads/main/pinduoduo.png
 #!date = 2024-10-26 22：36
 
 [Rule]
