@@ -1,12 +1,12 @@
-#!name = TT自用的广告过滤器
+#!name = TT广告过滤器
 #!desc = TT自用的广告过滤器
-#!author = 铁泳
+#!author = TT[https://github.com/LLLLLLYOHO/Loon-Plugin]
 #!tag = 去广告
 #!system = 
 #!system_version = 
 #!loon_version = 3.2.3(762)
 #!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Advertising.png
-#!date = 2024-10-21 22:29:32
+#!date = 2024-10-27 17:00:00
 #!support=支持多款款APP/小程序
 #!remark=下方的所有规则都标注了对应的hostname，可能存在错误或者遗漏，欢迎反馈。对于无法/可选MITM的hostname都特别做了“如开启可自行添加主机名”提示，如果提示后面没有标注主机名则包含所有主机名，否则只包含提示语后面的主机名。
 #############################################
@@ -94,7 +94,6 @@ DOMAIN, mssdk.volces.com, REJECT
 DOMAIN, pangolin.snssdk.com, REJECT
 DOMAIN, gromore.pangolin-sdk-toutiao.com, REJECT
 DOMAIN-KEYWORD, -ad-sign.byteimg.com, REJECT
-# DOMAIN-KEYWORD, api-access.pangolin-sdk-toutiao, REJECT // 被复写替代
 DOMAIN-KEYWORD, log-api.pangolin-sdk-toutiao, REJECT
 DOMAIN-KEYWORD, -ad.byteoversea.com, REJECT
 DOMAIN-KEYWORD, video-cn.snssdk.com, REJECT
