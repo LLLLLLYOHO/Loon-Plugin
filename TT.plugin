@@ -6,7 +6,7 @@
 #!system_version = 
 #!loon_version = 3.2.3(762)
 #!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Advertising.png
-#!date = 2024-11-01 02:38:20
+#!date = 2024-11-01 14:57:35
 #!support=支持多款款APP/小程序
 #!remark=下方的所有规则都标注了对应的hostname，可能存在错误或者遗漏，欢迎反馈。对于无法/可选MITM的hostname都特别做了“如开启可自行添加主机名”提示，如果提示后面没有标注主机名则包含所有主机名，否则只包含提示语后面的主机名。
 #############################################
@@ -115,22 +115,22 @@ IP-CIDR, 115.236.121.195/32, REJECT, no-resolve
 
 # >>>>>>>>>>>>>>> ✅ Z ✅ <<<<<<<<<<<<<<
 # > 知乎
-DOMAIN, appcloud.zhihu.com, REJECT
-DOMAIN, appcloud2.in.zhihu.com, REJECT
-DOMAIN, crash2.zhihu.com, REJECT
-DOMAIN, mqtt.zhihu.com, REJECT
-DOMAIN, sugar.zhihu.com, REJECT
-DOMAIN, zxid-m.mobileservice.cn, REJECT
-IP-CIDR, 103.41.167.237/32, REJECT, no-resolve
-IP-CIDR, 118.89.204.198/32, REJECT, no-resolve
-IP-CIDR6, 2402:4e00:1200:ed00:0:9089:6dac:96b6/128, REJECT, no-resolve
+#DOMAIN, appcloud.zhihu.com, REJECT
+#DOMAIN, appcloud2.in.zhihu.com, REJECT
+#DOMAIN, crash2.zhihu.com, REJECT
+#DOMAIN, mqtt.zhihu.com, REJECT
+#DOMAIN, sugar.zhihu.com, REJECT
+#DOMAIN, zxid-m.mobileservice.cn, REJECT
+#IP-CIDR, 103.41.167.237/32, REJECT, no-resolve
+#IP-CIDR, 118.89.204.198/32, REJECT, no-resolve
+#IP-CIDR6, 2402:4e00:1200:ed00:0:9089:6dac:96b6/128, REJECT, no-resolve
 
 [Rewrite]
 # >>>>>>>>>>>>>>> ✅ 5 ✅ <<<<<<<<<<<<<<
 # > 555影视
 # hostname = vip7.fzwdyy.cn, *.qyfxgd.cn, *.weilai555.com, *.ecoliving168.com
-^https?:\/\/vip7\.fzwdyy\.cn:8083\/api\/(getAdvertInfo|getGOOGAdvert) reject-200
-^https?:\/\/[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+){1,3}(:\d+)?\/api\/v\d\/advert reject
+#^https?:\/\/vip7\.fzwdyy\.cn:8083\/api\/(getAdvertInfo|getGOOGAdvert) reject-200
+#^https?:\/\/[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+){1,3}(:\d+)?\/api\/v\d\/advert reject
 
 # >>>>>>>>>>>>>>> ✅ A ✅ <<<<<<<<<<<<<<
 # > 阿里巴巴
@@ -156,21 +156,21 @@ IP-CIDR6, 2402:4e00:1200:ed00:0:9089:6dac:96b6/128, REJECT, no-resolve
 # > 爱奇艺
 # hostname = -i.vip.iqiyi.com, *.iqiyi.com
 # 播放页开通会员提示
-^https?:\/\/act\.vip\.iqiyi\.com\/interact\/api\/v2\/show\? reject-dict
+#^https?:\/\/act\.vip\.iqiyi\.com\/interact\/api\/v2\/show\? reject-dict
 # 播放页多余动效
-^https?:\/\/iface2\.iqiyi\.com\/ivos\/interact\/video\/data\? reject-dict
+#^https?:\/\/iface2\.iqiyi\.com\/ivos\/interact\/video\/data\? reject-dict
 # 播放页升级白金会员按钮
-^https?:\/\/iface2\.iqiyi\.com\/video\/3\.0\/v_interface_proxy\? reject-dict
+#^https?:\/\/iface2\.iqiyi\.com\/video\/3\.0\/v_interface_proxy\? reject-dict
 # 青少年弹窗
-^https?:\/\/iface2\.iqiyi\.com\/views_pop\/3\.0\/pop_control\? reject-dict
+#^https?:\/\/iface2\.iqiyi\.com\/views_pop\/3\.0\/pop_control\? reject-dict
 
 # > 爱企查
 # hostname = b2baifanfan.baidu.com
-^https?:\/\/b2baifanfan\.baidu\.com\/crm\/web\/b2b\/im\/common\/getConfigByDeviceNum reject-200
+#^https?:\/\/b2baifanfan\.baidu\.com\/crm\/web\/b2b\/im\/common\/getConfigByDeviceNum reject-200
 
 # > 爱回收
 # hostname = gw.aihuishou.com
-^https?:\/\/gw\.aihuishou\.com\/app-portal\/home\/getadvertisement reject
+#^https?:\/\/gw\.aihuishou\.com\/app-portal\/home\/getadvertisement reject
 
 # > 爱思助手
 # hostname = list-app-m.i4.cn
@@ -178,90 +178,90 @@ IP-CIDR6, 2402:4e00:1200:ed00:0:9089:6dac:96b6/128, REJECT, no-resolve
 
 # > 爱美剧
 # hostname = api.bjxkhc.com
-^https?:\/\/api\.bjxkhc\.com\/index\.php\/app\/ios\/ver/index_ios$ reject
-^https?:\/\/api\.bjxkhc\.com\/index\.php\/app\/ios\/pay/ok$ reject-dict
-^https?:\/\/api\.bjxkhc\.com\/index\.php\/app\/ios\/ads\/ reject
+#^https?:\/\/api\.bjxkhc\.com\/index\.php\/app\/ios\/ver/index_ios$ reject
+#^https?:\/\/api\.bjxkhc\.com\/index\.php\/app\/ios\/pay/ok$ reject-dict
+#^https?:\/\/api\.bjxkhc\.com\/index\.php\/app\/ios\/ads\/ reject
 
 # > 爱阅书香
 # hostname = icc.one
-^https?:\/\/icc\.one\/iFreeTime\/xid32uxaoecnfv2\/ reject
+#^https?:\/\/icc\.one\/iFreeTime\/xid32uxaoecnfv2\/ reject
 
 # >>>>>>>>>>>>>>> ✅ B ✅ <<<<<<<<<<<<<<
 # > 百度地图
 # hostname = dss0.bdstatic.com, tb1.bdstatic.com, tb2.bdstatic.com, ss0.bdstatic.com, gss0.bdstatic.com, newclient.map.baidu.com
-^https?:\/\/dss0\.bdstatic\.com\/-0U0bnSm1A5BphGlnYG\/ reject-200
-^https?:\/\/dss0\.bdstatic\.com\/.+/tam-ogel\/.+\.(jpg|mp4) reject
-^https?:\/\/tb1\.bdstatic\.com\/tb\/cms\/ngmis\/adsense\/*.jpg reject
-^https?:\/\/tb2\.bdstatic\.com\/tb\/mobile\/spb\/widget\/jump reject-img
-^https?:\/\/ss0\.bdstatic\.com/.+?_\d{3}_\d{4}\.jpg reject-200
-^https?:\/\/gss0\.bdstatic\.com\/.+?\/static\/wiseindex\/img\/bd_red_packet\.png reject-img
+#^https?:\/\/dss0\.bdstatic\.com\/-0U0bnSm1A5BphGlnYG\/ reject-200
+#^https?:\/\/dss0\.bdstatic\.com\/.+/tam-ogel\/.+\.(jpg|mp4) reject
+#^https?:\/\/tb1\.bdstatic\.com\/tb\/cms\/ngmis\/adsense\/*.jpg reject
+#^https?:\/\/tb2\.bdstatic\.com\/tb\/mobile\/spb\/widget\/jump reject-img
+#^https?:\/\/ss0\.bdstatic\.com/.+?_\d{3}_\d{4}\.jpg reject-200
+#^https?:\/\/gss0\.bdstatic\.com\/.+?\/static\/wiseindex\/img\/bd_red_packet\.png reject-img
 
 # > 百度输入法
 # hostname = r6.mo.baidu.com, res.mi.baidu.com, mime.baidu.com, mbd.baidu.com
-^https?:\/\/r6\.mo\.baidu\.com\/res\/file/advertisement\/files\/.+\.jpg reject
-^https?:\/\/res\.mi\.baidu\.com\/imeres\/ime-res\/advertisement\/files\/.+\.jpg reject
-^https?:\/\/mime\.baidu\.com\/v5\/activity\/advertisementnonrealtime reject
-^https?:\/\/mime\.baidu\.com\/v5\/start_screen_ads\/list reject
-^https?:\/\/mime\.baidu\.com\/v5\/hotpatch\/check\?hotpatch reject
+#^https?:\/\/r6\.mo\.baidu\.com\/res\/file/advertisement\/files\/.+\.jpg reject
+#^https?:\/\/res\.mi\.baidu\.com\/imeres\/ime-res\/advertisement\/files\/.+\.jpg reject
+#^https?:\/\/mime\.baidu\.com\/v5\/activity\/advertisementnonrealtime reject
+#^https?:\/\/mime\.baidu\.com\/v5\/start_screen_ads\/list reject
+#^https?:\/\/mime\.baidu\.com\/v5\/hotpatch\/check\?hotpatch reject
 # 百度输入法开屏
-^https?:\/\/mime\.baidu\.com\/v5\/start_screen_ads/list reject-dict
+#^https?:\/\/mime\.baidu\.com\/v5\/start_screen_ads/list reject-dict
 # 应用内灵感语录 输入页面推荐里语录
-^https?:\/\/mime\.baidu\.com\/sapi\/v1\/lccorpus\/(applist|pannellist) reject-dict
+#^https?:\/\/mime\.baidu\.com\/sapi\/v1\/lccorpus\/(applist|pannellist) reject-dict
 # 输入法点击图标
-^https?:\/\/mime\.baidu\.com\/sapi\/v1\/circle\/joinedlist reject-dict
-^https?:\/\/mime\.baidu\.com\/commer\/pocket_api\/enterprise_list reject-dict
-^https?:\/\/mbd\.baidu\.com\/ccs\/v1\/start\/confsync\?appname=baidu_input reject-dict
+#^https?:\/\/mime\.baidu\.com\/sapi\/v1\/circle\/joinedlist reject-dict
+#^https?:\/\/mime\.baidu\.com\/commer\/pocket_api\/enterprise_list reject-dict
+#^https?:\/\/mbd\.baidu\.com\/ccs\/v1\/start\/confsync\?appname=baidu_input reject-dict
 
 # > 百度网盘
 # hostname = pan.baidu.com, ndstatic.cdn.bcebos.com, staticsns.cdn.bcebos.com, issuecdn.baidupcs.com, update.pan.baidu.com, fc-video.cdn.bcebos.com, rp.hpplay.cn
-^https?:\/\/pan\.baidu\.com\/rest\/\d\.\d\/pcs\/adx reject
-^https?:\/\/pan\.baidu\.com\/rest\/2\.0\/pcs\/ad reject
-^https?:\/\/pan\.baidu\.com\/act\/v\d\/(bchannel|welfare)\/list reject
-^https?:\/\/pan\.baidu\.com\/act\/api\/activityentry reject
-^https?:\/\/pan\.baidu\.com\/pmall\/order\/privilege\/info reject
-^https?:\/\/pan\.baidu\.com\/rest\/.+\/pcs\/adx reject
-^https?:\/\/pan\.baidu\.com\/api\/useractivity\/activity reject
-^https?:\/\/pan\.baidu\.com\/act\/.+\/bchannel\/list reject
-^https?:\/\/pan\.baidu\.com\/api\/certuser\/get reject
-^https?:\/\/pan\.baidu\.com\/component\/view\/(1510|1130)\?vip reject
-^https?:\/\/ndstatic\.cdn\.bcebos\.com\/activity\/welfare\/js\/.+\.js reject
-^https?:\/\/ndstatic\.cdn\.bcebos\.com\/activity\/welfare\/index\.html reject
-^https?:\/\/staticsns\.cdn\.bcebos\.com\/amis\/.+/banner.png reject
-^https?:\/\/issuecdn\.baidupcs\.com\/issue\/netdisk\/guanggao reject
-^https?:\/\/update\.pan\.baidu\.com\/statistics reject
-^https?:\/\/fc-video\.cdn\.bcebos\.com reject
-^https?:\/\/rp\.hpplay\.cn\/logouts reject
+#^https?:\/\/pan\.baidu\.com\/rest\/\d\.\d\/pcs\/adx reject
+#^https?:\/\/pan\.baidu\.com\/rest\/2\.0\/pcs\/ad reject
+#^https?:\/\/pan\.baidu\.com\/act\/v\d\/(bchannel|welfare)\/list reject
+#^https?:\/\/pan\.baidu\.com\/act\/api\/activityentry reject
+#^https?:\/\/pan\.baidu\.com\/pmall\/order\/privilege\/info reject
+#^https?:\/\/pan\.baidu\.com\/rest\/.+\/pcs\/adx reject
+#^https?:\/\/pan\.baidu\.com\/api\/useractivity\/activity reject
+#^https?:\/\/pan\.baidu\.com\/act\/.+\/bchannel\/list reject
+#^https?:\/\/pan\.baidu\.com\/api\/certuser\/get reject
+#^https?:\/\/pan\.baidu\.com\/component\/view\/(1510|1130)\?vip reject
+#^https?:\/\/ndstatic\.cdn\.bcebos\.com\/activity\/welfare\/js\/.+\.js reject
+#^https?:\/\/ndstatic\.cdn\.bcebos\.com\/activity\/welfare\/index\.html reject
+#^https?:\/\/staticsns\.cdn\.bcebos\.com\/amis\/.+/banner.png reject
+#^https?:\/\/issuecdn\.baidupcs\.com\/issue\/netdisk\/guanggao reject
+#^https?:\/\/update\.pan\.baidu\.com\/statistics reject
+#^https?:\/\/fc-video\.cdn\.bcebos\.com reject
+#^https?:\/\/rp\.hpplay\.cn\/logouts reject
 
 # > 百度翻译
 # hostname = mime.baidu.com
-^https?:\/\/mime\.baidu\.com\/v\d\/IosStart\/getStartInfo reject
-^https?:\/\/mime\.baidu\.com\/v\d\/activity\/advertisement reject
+#^https?:\/\/mime\.baidu\.com\/v\d\/IosStart\/getStartInfo reject
+#^https?:\/\/mime\.baidu\.com\/v\d\/activity\/advertisement reject
 
 # > 百度文库
 # hostname = appwk.baidu.com
-^https?:\/\/appwk\.baidu\.com\/xpage\/interface\/wknaad reject-200
+#^https?:\/\/appwk\.baidu\.com\/xpage\/interface\/wknaad reject-200
 
 # > 百度
 # hostname = www.baidu.com, fcvbjbcebos.baidu.com, cover.baidu.com, baichuan.baidu.com, api*.tuisong.baidu.com, afd.baidu.com, mobads.baidu.com, issuecdn.baidupcs.com, update.pan.baidu.com, sa*.tuisong.baidu.com, m.baidu.com, sofire.baidu.com
-^https?:\/\/fcvbjbcebos\.baidu\.com\/.+.mp4 reject
-^https?:\/\/fcvbjbcebos\.baidu\.com\/.+?\.mp4 reject-img
-^https?:\/\/cover\.baidu\.com\/cover\/page\/dspSwitchAds\/ reject
-^https?:\/\/baichuan\.baidu\.com\/rs\/adpmobile\/launch reject
-^https?:\/\/api\d\.tuisong\.baidu\.com reject-img
-^https?:\/\/afd\.baidu\.com\/afd\/entry reject
-^https?:\/\/als\.baidu\.com\/clog\/clog reject
-^https?:\/\/mobads\.baidu\.com\/cpro\/ui\/mads.+ reject
-^https?:\/\/issuecdn\.baidupcs\.com\/issue\/netdisk\/guanggao\/ reject-200
-^https?:\/\/[\s\S]*\.baidu\.com/.*?ad[xs]\.php reject-img
-^https?:\/\/t\d{2}\.baidu\.com reject-img
-^https?:\/\/log.+?baidu\.com reject
-^https?:\/\/sa\d\.tuisong\.baidu\.com reject-img
-^https?:\/\/www.baidu.com\/?action=static&ms=1&version=css_page_2@0.*? reject
+#^https?:\/\/fcvbjbcebos\.baidu\.com\/.+.mp4 reject
+#^https?:\/\/fcvbjbcebos\.baidu\.com\/.+?\.mp4 reject-img
+#^https?:\/\/cover\.baidu\.com\/cover\/page\/dspSwitchAds\/ reject
+#^https?:\/\/baichuan\.baidu\.com\/rs\/adpmobile\/launch reject
+#^https?:\/\/api\d\.tuisong\.baidu\.com reject-img
+#^https?:\/\/afd\.baidu\.com\/afd\/entry reject
+#^https?:\/\/als\.baidu\.com\/clog\/clog reject
+#^https?:\/\/mobads\.baidu\.com\/cpro\/ui\/mads.+ reject
+#^https?:\/\/issuecdn\.baidupcs\.com\/issue\/netdisk\/guanggao\/ reject-200
+#^https?:\/\/[\s\S]*\.baidu\.com/.*?ad[xs]\.php reject-img
+#^https?:\/\/t\d{2}\.baidu\.com reject-img
+#^https?:\/\/log.+?baidu\.com reject
+#^https?:\/\/sa\d\.tuisong\.baidu\.com reject-img
+#^https?:\/\/www.baidu.com\/?action=static&ms=1&version=css_page_2@0.*? reject
 
 # > 必胜客
 # hostname = res.pizzahut.com.cn
-^https?:\/\/res\.pizzahut\.com\.cn\/CRM\/phad\/member\/app\/member reject-200
-^https?:\/\/res\.pizzahut\.com\.cn\/CRM\/phad\/apphome\/apphome reject
+#^https?:\/\/res\.pizzahut\.com\.cn\/CRM\/phad\/member\/app\/member reject-200
+#^https?:\/\/res\.pizzahut\.com\.cn\/CRM\/phad\/apphome\/apphome reject
 
 # >>>>>>>>>>>>>>> ✅ C ✅ <<<<<<<<<<<<<<
 # > 彩云天气
@@ -295,20 +295,20 @@ IP-CIDR6, 2402:4e00:1200:ed00:0:9089:6dac:96b6/128, REJECT, no-resolve
 # > DJI Store (大疆商城)
 # hostname = se-api.djiits.com
 # 去开屏广告
-^https:\/\/se-api\.djiits\.com\/api\/components\/launch_ad\.json\?abbrv_url=1&country=cn&language=zh-CN reject-dict
+#^https:\/\/se-api\.djiits\.com\/api\/components\/launch_ad\.json\?abbrv_url=1&country=cn&language=zh-CN reject-dict
 
 # > 大麦
 # hostname = acs.m.taobao.com, amdc.m.taobao.com
-^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.damai\.wireless\.home\.welcome reject-200
-^https?:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch\?appkey=23782110 reject
+#^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.damai\.wireless\.home\.welcome reject-200
+#^https?:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch\?appkey=23782110 reject
 
 # > 大师兄
 # hostname = sdk.alibaba.com.ailbaba.me, adservice.sigmob.cn
-^https?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/xgapp\.php\/v\d\/version reject-200
-^https?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/xgapp\.php\/v\d\/advert\?position=[^2]+ reject-200
-^https?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/xgapp\.php\/v\d\/top_notice\? reject-200
-^https?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/(dsx|xgapp)\.php\/v\d\/(top_notice\?|version|advert\?position=[^2]+) reject-200
-^https?:\/\/adservice\.sigmob\.cn\/extconfig response-body-replace-regex false true
+#^https?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/xgapp\.php\/v\d\/version reject-200
+#^https?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/xgapp\.php\/v\d\/advert\?position=[^2]+ reject-200
+#^https?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/xgapp\.php\/v\d\/top_notice\? reject-200
+#^https?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/(dsx|xgapp)\.php\/v\d\/(top_notice\?|version|advert\?position=[^2]+) reject-200
+#^https?:\/\/adservice\.sigmob\.cn\/extconfig response-body-replace-regex false true
 
 # > 钉钉
 # hostname = gw.alicdn.com, img.alicdn.com
@@ -321,37 +321,37 @@ IP-CIDR6, 2402:4e00:1200:ed00:0:9089:6dac:96b6/128, REJECT, no-resolve
 
 # > 滴滴青桔
 # hostname = pt-starimg.didistatic.com, omgup*.xiaojukeji.com
-^https?:\/\/pt-starimg\.didistatic\.com\/static\/starimg\/node\/.*.(jpg|png|gif) reject-200
-^https?:\/\/omgup[0-9]{1}\.xiaojukeji\.com\/api reject-200
+#^https?:\/\/pt-starimg\.didistatic\.com\/static\/starimg\/node\/.*.(jpg|png|gif) reject-200
+#^https?:\/\/omgup[0-9]{1}\.xiaojukeji\.com\/api reject-200
 
 # > 嘀嗒出行
 # hostname = capis*.didapinche.com, adx-cn.anythinktech.com, www.didapinche.com
 # 小程序净化
-^https?:\/\/capis(-\d)?\.didapinche\.com\/adbase reject
-^https?:\/\/capis(-\d)?\.didapinche\.com\/ad\/ reject
-^https?:\/\/adx-cn\.anythinktech\.com\/bid reject-dict
-^https?:\/\/capis(-?\w*)?\.didapinche\.com\/publish\/api\/upgrade reject-dict
-^https?:\/\/www\.didapinche\.com\/app\/adstat\/ reject-200
+#^https?:\/\/capis(-\d)?\.didapinche\.com\/adbase reject
+#^https?:\/\/capis(-\d)?\.didapinche\.com\/ad\/ reject
+#^https?:\/\/adx-cn\.anythinktech\.com\/bid reject-dict
+#^https?:\/\/capis(-?\w*)?\.didapinche\.com\/publish\/api\/upgrade reject-dict
+#^https?:\/\/www\.didapinche\.com\/app\/adstat\/ reject-200
 
 # > 得物
 # 开屏广告 【Runestoner】分享
 # hostname = app.dewu.com, cdn.poizon.com
-^https?:\/\/app\.dewu\.com\/api\/v1\/app\/advertisement reject
-^https?:\/\/cdn\.poizon\.com\/node-common\/.*.jpg reject-200
+#^https?:\/\/app\.dewu\.com\/api\/v1\/app\/advertisement reject
+#^https?:\/\/cdn\.poizon\.com\/node-common\/.*.jpg reject-200
 
 # > 电E宝
 # hostname = app.95598pay.com
-^https?:\/\/app\.95598pay\.com\/debapi\/adsite\/ reject-200
+#^https?:\/\/app\.95598pay\.com\/debapi\/adsite\/ reject-200
 
 # > 电视家
 # hostname = api.gaoqingdianshi.com, cdn.dianshihome.com
-^https?:\/\/api\.gaoqingdianshi\.com\/api\/v\d\/ad\/ reject
-^https?:\/\/cdn\.dianshihome\.com\/static\/ad\/ reject
+#^https?:\/\/api\.gaoqingdianshi\.com\/api\/v\d\/ad\/ reject
+#^https?:\/\/cdn\.dianshihome\.com\/static\/ad\/ reject
 
 # >>>>>>>>>>>>>>> ✅ E ✅ <<<<<<<<<<<<<<
 # > e充电
 # hostname = cdn-evone-ceph.echargenet.com
-^https?:\/\/cdn-evone-ceph\.echargenet\.com\/gw-emas-cdn\/63c4e3b558bb610008969f89 reject-200
+#^https?:\/\/cdn-evone-ceph\.echargenet\.com\/gw-emas-cdn\/63c4e3b558bb610008969f89 reject-200
 
 # > 饿了么
 # hostname = elemecdn.com, fuss10.elemecdn.com, cube.elemecdn.com, www1.elecfans.com, nr-op.elemecdn.com
@@ -401,16 +401,16 @@ IP-CIDR6, 2402:4e00:1200:ed00:0:9089:6dac:96b6/128, REJECT, no-resolve
 
 # > 怪兽充电
 # hostname = awg.enmonster.com
-https?:\/\/awg\.enmonster\.com\/apa\/(advert\/demand\/home\/poster|index\/advert\/skin) reject-dict
+#https?:\/\/awg\.enmonster\.com\/apa\/(advert\/demand\/home\/poster|index\/advert\/skin) reject-dict
 
 # > 怪兽充电 微信小程序
 # hostname = aag.enmonster.com
-^https?:\/\/aag\.enmonster\.com\/apa\/index\/advert\/skin reject
+#^https?:\/\/aag\.enmonster\.com\/apa\/index\/advert\/skin reject
 
 # > 高铁管家
 # hostname = cdn.133.cn, jt.rsscc.com, jp.rsscc.com
-^https?:\/\/cdn\.133\.cn\/md\/gtgj\/.+\/.+720x1280 reject-dict
-^https?:\/\/[a-z]*\.rsscc\.com\/[a-z]*\/adver reject
+#^https?:\/\/cdn\.133\.cn\/md\/gtgj\/.+\/.+720x1280 reject-dict
+#^https?:\/\/[a-z]*\.rsscc\.com\/[a-z]*\/adver reject
 
 # >>>>>>>>>>>>>>> ✅ H ✅ <<<<<<<<<<<<<<
 # > 韩剧TV
@@ -430,16 +430,16 @@ https?:\/\/awg\.enmonster\.com\/apa\/(advert\/demand\/home\/poster|index\/advert
 
 # > 盒马
 # hostname = acs.m.taobao.com, acs-m.freshippo.com
-^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.hippotown\.tabbar\.info reject
-^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.sg\.querysinglescene reject-dict
-^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.render\.querysinglepage reject-200
-^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.fc\.recommend\.feedscommondservice reject-dict
-^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.render\.querytabfeedstream reject-200
+#^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.hippotown\.tabbar\.info reject
+#^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.sg\.querysinglescene reject-dict
+#^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.render\.querysinglepage reject-200
+#^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.fc\.recommend\.feedscommondservice reject-dict
+#^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.render\.querytabfeedstream reject-200
 
 # > 海尔服务小程序
 # hostname = service.haiersmarthomes.com
 # 横幅广告
-^https?:\/\/service\.haiersmarthomes\.com\/management\/banner\/getBannerList\?source=4 reject-dict
+#^https?:\/\/service\.haiersmarthomes\.com\/management\/banner\/getBannerList\?source=4 reject-dict
 
 # >>>>>>>>>>>>>>> ✅ J ✅ <<<<<<<<<<<<<<
 # > 建行生活
@@ -493,39 +493,39 @@ https?:\/\/awg\.enmonster\.com\/apa\/(advert\/demand\/home\/poster|index\/advert
 
 # > 街电 微信小程序
 # hostname = s.jiediankeji.com
-^https?:\/\/s\.jiediankeji\.com\/adv reject-dict
+#^https?:\/\/s\.jiediankeji\.com\/adv reject-dict
 
 # >>>>>>>>>>>>>>> ✅ K ✅ <<<<<<<<<<<<<<
 # > Keep
 # hostname = api.gotokeep.com, kad.gotokeep.com, static1.keepcdn.com
-^https?:\/\/static1\.keepcdn\.com\/ark_optimus\/202\d\/*\/*\/.*.(png|jpg) reject-200
+#^https?:\/\/static1\.keepcdn\.com\/ark_optimus\/202\d\/*\/*\/.*.(png|jpg) reject-200
 # 屏蔽应用内弹窗
-^https?:\/\/api\.gotokeep\.com\/guide-webapp\/v\d\/popup\/getPopUp reject
+#^https?:\/\/api\.gotokeep\.com\/guide-webapp\/v\d\/popup\/getPopUp reject
 # 屏蔽部分启动弹窗
-^https?:\/\/api\.gotokeep\.com\/kprime\/v\d\/popups\/primeGuide reject
+#^https?:\/\/api\.gotokeep\.com\/kprime\/v\d\/popups\/primeGuide reject
 # 屏蔽开屏广告请求
-^https?:\/\/kad\.gotokeep\.com\/op-engine-webapp\/v\d\/ad reject
+#^https?:\/\/kad\.gotokeep\.com\/op-engine-webapp\/v\d\/ad reject
 # 屏蔽青少年弹窗
-^https?:\/\/api.gotokeep.com/cauchy/growth/init reject
+#^https?:\/\/api.gotokeep.com/cauchy/growth/init reject
 # 屏蔽搜索栏自动填充词
-^https?:\/\/api\.gotokeep\.com\/search\/v\d\/default\/keyword\/list reject
+#^https?:\/\/api\.gotokeep\.com\/search\/v\d\/default\/keyword\/list reject
 # 屏蔽热词
-^https?:\/\/api\.gotokeep\.com\/search\/v\d\/hotword\/list reject
+#^https?:\/\/api\.gotokeep\.com\/search\/v\d\/hotword\/list reject
 # 屏蔽hotCourse
-^https?:\/\/api\.gotokeep\.com\/search\/v\d\/hotCourse\/list reject
+#^https?:\/\/api\.gotokeep\.com\/search\/v\d\/hotCourse\/list reject
 # 屏蔽adwebapp
-^https?:\/\/api\.gotokeep\.com\/op-engine-webapp\/v\d\/ad reject
+#^https?:\/\/api\.gotokeep\.com\/op-engine-webapp\/v\d\/ad reject
 # 屏蔽广告预加载
-^https?:\/\/api\.gotokeep\.com\/ads\/v\d\/ads\/preload reject
+#^https?:\/\/api\.gotokeep\.com\/ads\/v\d\/ads\/preload reject
 # 屏蔽adbox
-^https?:\/\/api\.gotokeep\.com\/training\/box\/config reject
+#^https?:\/\/api\.gotokeep\.com\/training\/box\/config reject
 # 屏蔽更新
-^https?:\/\/api\.gotokeep\.com\/anno\/v\d\/upgrade\/check reject
+#^https?:\/\/api\.gotokeep\.com\/anno\/v\d\/upgrade\/check reject
 
 # > 酷我音乐
 # hostname = audiobookpay.kuwo.cn, mgxhtj.kuwo.cn, nmobi.kuwo.cn, searchrecterm.kuwo.cn, musicpay.kuwo.cn, vip1.kuwo.cn
 # 广告
-^https?:\/\/audiobookpay\.kuwo\.cn\/a\.p\?op=get_advertright_endtime reject-dict
+#^https?:\/\/audiobookpay\.kuwo\.cn\/a\.p\?op=get_advertright_endtime reject-dict
 
 # > 酷安
 # hostname = api.coolapk.com
@@ -561,22 +561,22 @@ https?:\/\/awg\.enmonster\.com\/apa\/(advert\/demand\/home\/poster|index\/advert
 
 # > 美团众包
 # hostname = peisongapi.meituan.com
-^https?:\/\/peisongapi\.meituan\.com\/client\/getInitiateImage reject-200
+#^https?:\/\/peisongapi\.meituan\.com\/client\/getInitiateImage reject-200
 
 # > 美团充电宝小程序
 # hostname = cdb.meituan.com
-^https?:\/\/cdb\.meituan\.com\/marketing\/source\/getPageSlotList reject-dict
+#^https?:\/\/cdb\.meituan\.com\/marketing\/source\/getPageSlotList reject-dict
 
 # > 每日优鲜
 # hostname = j-image.missfresh.cn
-^https?:\/\/j-image\.missfresh\.cn\/img_(.+)\.gif$ reject
-^https?:\/\/j-image\.missfresh\.cn\/img_(.+)\.(jpg|jpeg|gif|png)\?iopcmd=convert&dst=webp&q=85$ reject
+#^https?:\/\/j-image\.missfresh\.cn\/img_(.+)\.gif$ reject
+#^https?:\/\/j-image\.missfresh\.cn\/img_(.+)\.(jpg|jpeg|gif|png)\?iopcmd=convert&dst=webp&q=85$ reject
 
 # > 买单吧
 # hostname = creditcardapp.bankcomm.cn, creditcardapp.bankcomm.com, creditcard.bankcomm.cn, creditcard.bankcomm.com
-^https?:\/\/creditcard\.bankcomm\.(com|cn)\/tfimg\/public00\/M00\/[a-zA-Z0-9]{2}\/[a-zA-Z0-9]{2}\/[a-zA-Z0-9-]{30}\.(jpg|jpeg) reject
-^https?:\/\/creditcardapp\.bankcomm\.(com|cn)\/mappweb_interface\/common\/(qryPopAds|qryLaunchAds)\.do reject-200
-^https?:\/\/creditcardapp\.bankcomm\.(com|cn)\/mappweb_interaction\/appInfo\/appNewestVersion reject-200
+#^https?:\/\/creditcard\.bankcomm\.(com|cn)\/tfimg\/public00\/M00\/[a-zA-Z0-9]{2}\/[a-zA-Z0-9]{2}\/[a-zA-Z0-9-]{30}\.(jpg|jpeg) reject
+#^https?:\/\/creditcardapp\.bankcomm\.(com|cn)\/mappweb_interface\/common\/(qryPopAds|qryLaunchAds)\.do reject-200
+#^https?:\/\/creditcardapp\.bankcomm\.(com|cn)\/mappweb_interaction\/appInfo\/appNewestVersion reject-200
 
 # > 芒果TV
 # hostname = *.mgtv.com
@@ -595,19 +595,19 @@ https?:\/\/awg\.enmonster\.com\/apa\/(advert\/demand\/home\/poster|index\/advert
 
 # > 咪咕
 # hostname = *.cmvideo.cn
-^https?:\/\/gg\w+?\.cmvideo\.cn\/v\d\/iflyad\/ reject-200
-^https?:\/\/ggic\d?\.cmvideo\.cn\/ad\/ reject-200
-^https?:\/\/ggx\.cmvideo\.cn\/request\/ reject-200
-^https?:\/\/.+?\/cdn-adn\/ reject-200
+#^https?:\/\/gg\w+?\.cmvideo\.cn\/v\d\/iflyad\/ reject-200
+#^https?:\/\/ggic\d?\.cmvideo\.cn\/ad\/ reject-200
+#^https?:\/\/ggx\.cmvideo\.cn\/request\/ reject-200
+#^https?:\/\/.+?\/cdn-adn\/ reject-200
 
 # > 秒拍
 # hostname = b-api.ins.miaopai.com
-^https?:\/\/b-api\.ins\.miaopai\.com\/\d\/ad/ reject
+#^https?:\/\/b-api\.ins\.miaopai\.com\/\d\/ad/ reject
 
 # > 美图秀秀
 # hostname = mea.meitudata.com, adui.tg.meitu.com
-^https?:\/\/mea\.meitudata\.com\/kaiping reject
-^https?:\/\/adui\.tg\.meitu\.com reject-dict
+#^https?:\/\/mea\.meitudata\.com\/kaiping reject
+#^https?:\/\/adui\.tg\.meitu\.com reject-dict
 
 # > 麦当劳
 # hostname = api.mcd.cn
@@ -629,15 +629,15 @@ https?:\/\/awg\.enmonster\.com\/apa\/(advert\/demand\/home\/poster|index\/advert
 # > PushPlus微信推送广告
 # hostname = image.pushplus.plus, www.pushplus.plus
 # 屏蔽图片广告，但是还有css空白模块, 如开启可自行添加主机名
-#^https?:\/\/image\.pushplus\.plus\/ad.* reject-dict
+^https?:\/\/image\.pushplus\.plus\/ad.* reject-dict
 # 屏蔽广告推送模块，会把“打开小程序”也屏蔽
 #^https?:\/\/www\.pushplus\.plus.* response-body-replace-regex (<head>) $1<style type="text/css"> div.container.py-3.text-center {display: none! important} </style />
 
 # > 拼多多
 # hostname = api.pinduoduo.com, api.yangkeduo.com, mobile.yangkeduo.com
-^https?:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash reject
+#^https?:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash reject
 # 多多买菜 开屏广告
-^https?:\/\/mobile\.yangkeduo\.com\/proxy\/api\/api\/express\/post\/waybill\/red_packet\/goods_list$ response-body-replace-regex "list":\[.+\] "list":[]
+#^https?:\/\/mobile\.yangkeduo\.com\/proxy\/api\/api\/express\/post\/waybill\/red_packet\/goods_list$ response-body-replace-regex "list":\[.+\] "list":[]
 
 #票根  启动广告
 # hostname = pss.txffp.com, 62578.activity-12.m.duiba.com.cn
@@ -673,38 +673,38 @@ https?:\/\/awg\.enmonster\.com\/apa\/(advert\/demand\/home\/poster|index\/advert
 
 # > 起点读书
 # hostname = qidian.qpic.cn, mage.if.qidian.com, magev6.if.qidian.com
-^https?:\/\/qidian\.qpic\.cn\/qidian_common reject-img
-^https?:\/\/mage\.if\.qidian\.com\/Atom\.axd\/Api\/Client\/GetConfIOS reject-img
-^https?:\/\/mage\.if\.qidian\.com\/argus\/api\/v\d\/client\/getsplashscreen reject
-^https?://magev6.if.qidian.com/argus/api/v1/client/iosad reject
-^https?://magev6.if.qidian.com/argus/api/v1/bookshelf/getad reject
-^https?://magev6.if.qidian.com/argus/api/v4/client/getsplashscreen? reject
+#^https?:\/\/qidian\.qpic\.cn\/qidian_common reject-img
+#^https?:\/\/mage\.if\.qidian\.com\/Atom\.axd\/Api\/Client\/GetConfIOS reject-img
+#^https?:\/\/mage\.if\.qidian\.com\/argus\/api\/v\d\/client\/getsplashscreen reject
+#^https?://magev6.if.qidian.com/argus/api/v1/client/iosad reject
+#^https?://magev6.if.qidian.com/argus/api/v1/bookshelf/getad reject
+#^https?://magev6.if.qidian.com/argus/api/v4/client/getsplashscreen? reject
 # 起点读书投票、章末免费领取章节卡等
-^https?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/adv reject-dict
-^https?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/followsubscribe reject-dict
+#^https?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/adv reject-dict
+#^https?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/followsubscribe reject-dict
 # 我的界面内测推广
-^http[s]?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/bookshelf\/refresh reject-200
-^https?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/adv\/getadvlistbatch reject
+#^http[s]?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/bookshelf\/refresh reject-200
+#^https?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/adv\/getadvlistbatch reject
 # 书架置顶推广(保留签到移除花哨背景)
-^https?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/bookshelf\/getTopOperation reject-dict
+#^https?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/bookshelf\/getTopOperation reject-dict
 # 发现上面的图标屏蔽
-^https?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v2\/adv\/getadvlistbatch reject-dict
+#^https?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v2\/adv\/getadvlistbatch reject-dict
 
 # > 七猫小说
 # hostname = open.e.kuaishou.cn, api-access.pangolin-sdk-toutiao-b.com, api-access.pangolin-sdk-toutiao.com, api-access.pangolin-sdk-toutiao1.com, dsp-x.jd.com,api-cfg.wtzw.com, p1-lm.adukwai.com, lf-cdn-tos.bytescm.com
 # 删除了域名lf-cdn-tos.bytescm.com，原因是无法MITM
-^https?:\/\/open\.e\.kuaishou\.cn\/rest\/e\/v3\/open\/univ reject
-^https?:\/\/api-access\.pangolin-sdk-toutiao-b\.com\/api\/ad\/union\/sdk\/get_ads reject
-^https?:\/\/api-access\.(pangolin-sdk-toutiao|pangolin-sdk-toutiao1)\.com\/api\/ad reject
-^https?:\/\/dsp\-x\.jd\.com\/adx\/sdk reject
-^https?:\/\/api\-cfg\.wtzw\.com\/v1\/(adv|reward|operation) reject
-^https?:\/\/p1\-lm\.adukwai\.com\/bs2\/adUnionVideo reject
-^https?:\/\/lf\-cdn\-tos\.bytescm\.com\/obj\/static\/ad reject
+#^https?:\/\/open\.e\.kuaishou\.cn\/rest\/e\/v3\/open\/univ reject
+#^https?:\/\/api-access\.pangolin-sdk-toutiao-b\.com\/api\/ad\/union\/sdk\/get_ads reject
+#^https?:\/\/api-access\.(pangolin-sdk-toutiao|pangolin-sdk-toutiao1)\.com\/api\/ad reject
+#^https?:\/\/dsp\-x\.jd\.com\/adx\/sdk reject
+#^https?:\/\/api\-cfg\.wtzw\.com\/v1\/(adv|reward|operation) reject
+#^https?:\/\/p1\-lm\.adukwai\.com\/bs2\/adUnionVideo reject
+#^https?:\/\/lf\-cdn\-tos\.bytescm\.com\/obj\/static\/ad reject
 
 # > 汽车之家
 # hostname = adproxy.autohome.com.cn, app2.autoimg.cn
-^https?:\/\/adproxy\.autohome\.com\.cn\/AdvertiseService\/ reject-img
-^https?:\/\/app2\.autoimg\.cn\/apppdfs\/ reject-img
+#^https?:\/\/adproxy\.autohome\.com\.cn\/AdvertiseService\/ reject-img
+#^https?:\/\/app2\.autoimg\.cn\/apppdfs\/ reject-img
 
 # > 汽水音乐
 # hostname = webcast-open.douyin.com, beta-luna.douyin.com, ether-pack.pangolin-sdk-toutiao.com, api-access.pangolin-sdk-toutiao?.com, sf*-fe-tos.pglstatp-toutiao.com, lf-cdn-tos.bytescm.com
@@ -718,10 +718,10 @@ https?:\/\/awg\.enmonster\.com\/apa\/(advert\/demand\/home\/poster|index\/advert
 # 邀请开通会员弹窗
 ^https:\/\/beta-luna\.douyin\.com\/luna\/commerce\/v2\/commerce_info\? reject-dict
 # 字节跳动广告
-^https:\/\/ether-pack\.pangolin-sdk-toutiao\.com\/union\/endcard\/ reject
-^https:\/\/api-access\.pangolin-sdk-toutiao\d?\.com\/api\/ad\/ reject
-^https:\/\/sf\d+-fe-tos\.pglstatp-toutiao\.com\/obj\/ad-pattern\/ reject
-^https:\/\/lf-cdn-tos\.bytescm\.com\/obj\/static\/ad\/ reject
+#^https:\/\/ether-pack\.pangolin-sdk-toutiao\.com\/union\/endcard\/ reject
+#^https:\/\/api-access\.pangolin-sdk-toutiao\d?\.com\/api\/ad\/ reject
+#^https:\/\/sf\d+-fe-tos\.pglstatp-toutiao\.com\/obj\/ad-pattern\/ reject
+#^https:\/\/lf-cdn-tos\.bytescm\.com\/obj\/static\/ad\/ reject
 
 # > 全民K歌
 # hostname = y.gtimg.cn
@@ -744,7 +744,7 @@ https://api.rr.tv/storage/business/rootName/app/homePage\?dataType=JSON reject-d
 # > 日产智联
 # hostname = oneapph5.dongfeng-nissan.com.cn
 # 开屏广告
-^https?:\/\/oneapph5\.dongfeng-nissan\.com\.cn\/mb-gw\/vmsp-discover\/rest\/business-service\/v1\/advert\/advertinfo reject-dict
+#^https?:\/\/oneapph5\.dongfeng-nissan\.com\.cn\/mb-gw\/vmsp-discover\/rest\/business-service\/v1\/advert\/advertinfo reject-dict
 
 # > 瑞幸咖啡
 # hostname = capi.lkcoffee.com, ecapi.lkcoffee.com, m.lkcoffee.com, img0*.luckincoffeecdn.com
@@ -760,8 +760,8 @@ https://api.rr.tv/storage/business/rootName/app/homePage\?dataType=JSON reject-d
 # >>>>>>>>>>>>>>> ✅ S ✅ <<<<<<<<<<<<<<
 # > spotify
 # hostname = spclient.wg.spotify.com, api*.musical.ly
-^https?:\/\/spclient\.wg\.spotify\.com\/(ad-logic|ads|.+ad_slot|.+banners|.+canvases|.+cards|.+crashlytics|.+doubleclick.net|.+enabled-tracks|.+event|.+sponsored|.+promoted|.+promoted_offer) reject-img
-^https?:\/\/api\d?\.musical\.ly\/api\/ad\/ reject-img
+#^https?:\/\/spclient\.wg\.spotify\.com\/(ad-logic|ads|.+ad_slot|.+banners|.+canvases|.+cards|.+crashlytics|.+doubleclick.net|.+enabled-tracks|.+event|.+sponsored|.+promoted|.+promoted_offer) reject-img
+#^https?:\/\/api\d?\.musical\.ly\/api\/ad\/ reject-img
 
 # > Soul
 # hostname = 47.110.187.87, ssp.soulapp.cn, chat-live.soulapp.cn, api-account.soulapp.cn, api-global.soulapp.me, api-a.soulapp.cn, api-pay.soulapp.cn, gateway-mobile-gray.soulapp.cn, api-chat.soulapp.cn, post.soulapp.cn, api-user.soulapp.cn, ssp.soulapp.cn
@@ -775,10 +775,10 @@ https://api-global.soulapp.me/app/open/get reject
 
 # > 苏宁
 # hostname = mpcs.suning.com, image.suning.com, luckman.suning.com
-^https?:\/\/mpcs\.suning\.com\/mpcs\/dm\/getDmInfo reject
-^https?:\/\/image\.suning\.cn\/uimg\/ma\/ad\/ reject-200
+#^https?:\/\/mpcs\.suning\.com\/mpcs\/dm\/getDmInfo reject
+#^https?:\/\/image\.suning\.cn\/uimg\/ma\/ad\/ reject-200
 # 新人专享弹窗
-^https?:\/\/luckman\.suning\.com\/luck-web\/policy\/v\d\/msf\/index\.do reject-200
+#^https?:\/\/luckman\.suning\.com\/luck-web\/policy\/v\d\/msf\/index\.do reject-200
 
 # > 搜狗输入法
 # hostname = business-cdn.shouji.sogou.com, ios.sogou.com, android.sogou.com, h5api.sginput.qq.com
@@ -790,7 +790,7 @@ https://api-global.soulapp.me/app/open/get reject
 
 # > 搜电充电 微信小程序
 # hostname = wxs-weixin.sd.zhumanggroup.com
-^https?:\/\/wxs-weixin\.sd\.zhumanggroup\.com\/api\/v2\/ad reject-dict
+#^https?:\/\/wxs-weixin\.sd\.zhumanggroup\.com\/api\/v2\/ad reject-dict
 
 # > 深圳通
 # hostname = ecard.shenzhentong.com
@@ -799,29 +799,29 @@ https://api-global.soulapp.me/app/open/get reject
 # > 顺丰快递
 # hostname = ccsp-egmas.sf-express.com, ucmp.sf-express.com
 # APP净化 感谢【怎么肥事】分享
-^https?:\/\/ucmp\.sf-express\.com\/proxy\/esgcempcore\/memberGoods\/pointMallService\/goodsList reject-dict
-^https?:\/\/ccsp-egmas\.sf-express\.com\/cx-app-video\/video\/app\/video\/labelClusterList reject-dict
-^https?:\/\/ccsp-egmas\.sf-express\.com\/cx-app-base\/base\/app\/ad\/queryInfoFlow reject-dict
-^https?:\/\/ccsp-egmas\.sf-express\.com\/cx-app-base\/base\/app\/bms\/queryRecommend reject-dict
+#^https?:\/\/ucmp\.sf-express\.com\/proxy\/esgcempcore\/memberGoods\/pointMallService\/goodsList reject-dict
+#^https?:\/\/ccsp-egmas\.sf-express\.com\/cx-app-video\/video\/app\/video\/labelClusterList reject-dict
+#^https?:\/\/ccsp-egmas\.sf-express\.com\/cx-app-base\/base\/app\/ad\/queryInfoFlow reject-dict
+#^https?:\/\/ccsp-egmas\.sf-express\.com\/cx-app-base\/base\/app\/bms\/queryRecommend reject-dict
 
 # > 顺丰快递小程序
 # hostname = mcs-mimp-web.sf-express.com, ucmp.sf-express.com
-^https?:\/\/mcs-mimp-web\.sf-express\.com\/mcs-mimp\/integralPlanet\/getCxAdvertiseList reject-dict
-^https?:\/\/ucmp-static\.sf-express\.com\/proxy\/wxbase\/wxTicket\/wxLiveStreamInfo\?pageNo reject-dict
-^https?:\/\/ucmp\.sf-express\.com\/proxy\/operation-platform\/info-flow-adver\/query reject-dict
-^https?:\/\/ucmp\.sf-express\.com\/proxy\/esgcempcore\/memberManage\/memberEquity\/queryRecommendEquity reject-dict
-^https?:\/\/ucmp\.sf-express\.com\/proxy\/esgcempcore\/memberActLengthy\/fullGiveActivityService\/fullGiveInfo reject-dict
+#^https?:\/\/mcs-mimp-web\.sf-express\.com\/mcs-mimp\/integralPlanet\/getCxAdvertiseList reject-dict
+#^https?:\/\/ucmp-static\.sf-express\.com\/proxy\/wxbase\/wxTicket\/wxLiveStreamInfo\?pageNo reject-dict
+#^https?:\/\/ucmp\.sf-express\.com\/proxy\/operation-platform\/info-flow-adver\/query reject-dict
+#^https?:\/\/ucmp\.sf-express\.com\/proxy\/esgcempcore\/memberManage\/memberEquity\/queryRecommendEquity reject-dict
+#^https?:\/\/ucmp\.sf-express\.com\/proxy\/esgcempcore\/memberActLengthy\/fullGiveActivityService\/fullGiveInfo reject-dict
 
 # > 顺丰优选
 # hostname = mapi.sfbest.com
-^https?:\/\/mapi\.sfbest\.com\/brokerservice-server\/cms\/getPositionById.* reject
+#^https?:\/\/mapi\.sfbest\.com\/brokerservice-server\/cms\/getPositionById.* reject
 
 # > 识货
 # hostname = sh-gateway.shihuo.cn, static.shihuocdn.cn
 # 开屏广告
-^https?:\/\/sh-gateway\.shihuo\.cn\/v\d\/services\/sh-adapi\/home\/(screen|ad) reject
-^https?:\/\/static\.shihuocdn\.cn\/admin\/imgs/202[0-9]{5}\/[a-z0-9]{32}_513x777\.png reject-200
-^https?:\/\/static\.shihuocdn\.cn\/admin\/imgs/202[0-9]{5}\/[a-z0-9]{32}_750x1624\.png reject-200
+#^https?:\/\/sh-gateway\.shihuo\.cn\/v\d\/services\/sh-adapi\/home\/(screen|ad) reject
+#^https?:\/\/static\.shihuocdn\.cn\/admin\/imgs/202[0-9]{5}\/[a-z0-9]{32}_513x777\.png reject-200
+#^https?:\/\/static\.shihuocdn\.cn\/admin\/imgs/202[0-9]{5}\/[a-z0-9]{32}_750x1624\.png reject-200
 
 # > 山姆会员商店
 # hostname = api-sams.walmartmobile.cn
@@ -837,12 +837,12 @@ https://api-global.soulapp.me/app/open/get reject
 # >>>>>>>>>>>>>>> ✅ T ✅ <<<<<<<<<<<<<<
 # > top-widget
 # hostname = top-widgets-api.xiaozujian.com
-^https?:\/\/top-widgets-api\.xiaozujian\.com\/api\/ad\/config reject
+#^https?:\/\/top-widgets-api\.xiaozujian\.com\/api\/ad\/config reject
 
 # > 天猫精灵
 # hostname = ossgw.alicdn.com, zconfig.alibabausercontent.com
-^https?:\/\/ossgw.alicdn.com\/creatives-assets\/image\/ reject-200
-^https?:\/\/zconfig\.alibabausercontent\.com\/zconfig reject
+#^https?:\/\/ossgw.alicdn.com\/creatives-assets\/image\/ reject-200
+#^https?:\/\/zconfig\.alibabausercontent\.com\/zconfig reject
 
 # > 天猫养车
 # hostname = api.ncarzone.com
@@ -891,11 +891,11 @@ https://api-global.soulapp.me/app/open/get reject
 
 # > 腾讯视频
 # hostname = vv.video.qq.com
-^https?:\/\/[\d\.:]*\/?(defaultts\.tc|vmind\.qqvideo\.tc|finderpdd\.video)\.qq\.com\/\w+ reject
-^https?:\/\/apd-vlive\.apdcdn\.tc\.qq\.com\/vmind\.qqvideo\.tc\.qq\.com\/\w+ reject
-^https?:\/\/apd-\w+\.v\.smtcdns\.com\/(defaultts|omts|vmind\.qqvideo)\.tc\.qq\.com\/\w+ reject
-^https?:\/\/vv\.video\.qq\.com\/(diff|get)vmind reject-dict
-^https?:\/\/vv\.video\.qq\.com\/getvinfo response-body-replace-regex &sppreviewtype=\d(.*)&spsrt=\d &sppreviewtype=0$1&spsrt=0
+#^https?:\/\/[\d\.:]*\/?(defaultts\.tc|vmind\.qqvideo\.tc|finderpdd\.video)\.qq\.com\/\w+ reject
+#^https?:\/\/apd-vlive\.apdcdn\.tc\.qq\.com\/vmind\.qqvideo\.tc\.qq\.com\/\w+ reject
+#^https?:\/\/apd-\w+\.v\.smtcdns\.com\/(defaultts|omts|vmind\.qqvideo)\.tc\.qq\.com\/\w+ reject
+#^https?:\/\/vv\.video\.qq\.com\/(diff|get)vmind reject-dict
+#^https?:\/\/vv\.video\.qq\.com\/getvinfo response-body-replace-regex &sppreviewtype=\d(.*)&spsrt=\d &sppreviewtype=0$1&spsrt=0
 
 # > 腾讯乘车码微信小程序
 # hostname = ccmsupport-sz.tenpay.com
@@ -906,12 +906,12 @@ https://api-global.soulapp.me/app/open/get reject
 # hostname = static.gameplus.qq.com
 # > d{10} 10位纯数字-\d{4}4位纯数字 $ 结尾符号 ：只拦截10位纯数字-4位纯数字结尾的短连接,后面带尾巴的长连接不拦截。
 # > 如果想拦截1234567890-1234?wx类的长连接就加长规则,不加结尾符,只要前面的匹配了都会拦截。
-^https?:\/\/static\.gameplus\.qq\.com\/img\/\d{10}-\d{4}$ reject
+#^https?:\/\/static\.gameplus\.qq\.com\/img\/\d{10}-\d{4}$ reject
 
 # > 腾讯游戏
 # hostname = ssl.kohsocialapp.qq.com, qt.qq.com
-^https?:\/\/ssl\.kohsocialapp\.qq\.com:\d+\/game\/buttons reject
-^https?:\/\/qt\.qq\.com\/lua\/mengyou\/get_splash_screen_info reject
+#^https?:\/\/ssl\.kohsocialapp\.qq\.com:\d+\/game\/buttons reject
+#^https?:\/\/qt\.qq\.com\/lua\/mengyou\/get_splash_screen_info reject
 
 # > 腾讯手机管家
 # hostname = otheve.beacon.qq.com
@@ -955,7 +955,7 @@ https://api-global.soulapp.me/app/open/get reject
 # >>>>>>>>>>>>>>> ✅ W ✅ <<<<<<<<<<<<<<
 # > Weico(微博客户端)
 # hostname = overseas.weico.cc
-^https?:\/\/overseas\.weico\.cc\/portal\.php\?a=get_coopen_ads reject-200
+#^https?:\/\/overseas\.weico\.cc\/portal\.php\?a=get_coopen_ads reject-200
 
 # > WPS
 # hostname = ios.wps.cn, mobile-pic.cache.iciba.com
@@ -975,27 +975,27 @@ https://support.you.163.com/appversync/check.do reject
 # > 网易有道词典
 # hostname = dict.youdao.com, api-overmind.youdao.com, cdke.youdao.com, dictvip-business.youdao.com, dsp-impr2.youdao.com, impservice.dictapp.youdao.com, oral.youdao.com, oimage*.ydstatic.com
 # 翻译广告
-^https?:\/\/dict\.youdao\.com\/course\/tab\/translateTab reject-dict
+#^https?:\/\/dict\.youdao\.com\/course\/tab\/translateTab reject-dict
 # 听读训练
 #^https?:\/\/dict\.youdao\.com\/homepage\/tile reject-dict
 # 首次查词弹窗
-^https?:\/\/api-overmind\.youdao\.com\/openapi\/get\/luna\/dict\/dict-mobile\/prod\/dictCommonConfig reject-dict
+#^https?:\/\/api-overmind\.youdao\.com\/openapi\/get\/luna\/dict\/dict-mobile\/prod\/dictCommonConfig reject-dict
 # 首页弹窗
-^https?:\/\/cdke\.youdao\.com\/course3\/recommend\/dict\/startup reject-dict
+#^https?:\/\/cdke\.youdao\.com\/course3\/recommend\/dict\/startup reject-dict
 # 搜索预想
-^https?:\/\/dict\.youdao\.com\/commonsearch reject-dict
+#^https?:\/\/dict\.youdao\.com\/commonsearch reject-dict
 # 会员优惠券弹窗
-^https?:\/\/dict\.youdao\.com\/vip\/activity\/couponinfo reject-dict
+#^https?:\/\/dict\.youdao\.com\/vip\/activity\/couponinfo reject-dict
 # 首页左上角福利中心
-^https?:\/\/dict\.youdao\.com\/dictusertask\/system reject-dict
+#^https?:\/\/dict\.youdao\.com\/dictusertask\/system reject-dict
 # 会员界面横幅广告
-^https?:\/\/dictvip-business\.youdao\.com\/home\/ad reject-dict
+#^https?:\/\/dictvip-business\.youdao\.com\/home\/ad reject-dict
 # 其他
-^https?:\/\/oimage([a-z])([0-9])\.ydstatic\.com\/.+adpublish reject
-^https?:\/\/oimage\w\d\.ydstatic\.com\/image\?.+?=adpublish reject-img
-^https?:\/\/dsp-impr2\.youdao\.com\/adload reject-200
-^https?:\/\/impservice\.dictapp\.youdao\.com\/imp\/request reject-img
-^https?:\/\/oral\.youdao\.com\/oral\/adInfo reject-img
+#^https?:\/\/oimage([a-z])([0-9])\.ydstatic\.com\/.+adpublish reject
+#^https?:\/\/oimage\w\d\.ydstatic\.com\/image\?.+?=adpublish reject-img
+#^https?:\/\/dsp-impr2\.youdao\.com\/adload reject-200
+#^https?:\/\/impservice\.dictapp\.youdao\.com\/imp\/request reject-img
+#^https?:\/\/oral\.youdao\.com\/oral\/adInfo reject-img
 
 # >>>>>>>>>>>>>>> ✅ X ✅ <<<<<<<<<<<<<<
 # > 小米有品
@@ -1044,16 +1044,16 @@ https://support.you.163.com/appversync/check.do reject
 # > YouTube
 # hostname = rr*.googlevideo.com, youtubei.googleapis.com
 # 播放页广告
-^https:\/\/rr[\w-]+\.googlevideo\.com\/initplayback\? reject-dict
+#^https:\/\/rr[\w-]+\.googlevideo\.com\/initplayback\? reject-dict
 
 # > 优酷
 # hostname = acs.youku.com, push.m.youku.com, un-acs.youku.com
 # 播放页弹窗动图
-^https?:\/\/acs\.youku\.com\/gw\/mtop\.youku\.(pisp\.scripts\.get|xspace\.play\.position\.preload\.query|xspace\.poplayer\.position\.query) reject-dict
+#^https?:\/\/acs\.youku\.com\/gw\/mtop\.youku\.(pisp\.scripts\.get|xspace\.play\.position\.preload\.query|xspace\.poplayer\.position\.query) reject-dict
 
 # > 永辉
 # hostname = api.yonghuivip.com
-^https?:\/\/api\.yonghuivip\.com\/web\/shensuan\/ad\/getAd reject-200
+#^https?:\/\/api\.yonghuivip\.com\/web\/shensuan\/ad\/getAd reject-200
 
 # > 易捷加油小程序
 # hostname = ocrifs.ejoy.sinopec.com
@@ -1174,21 +1174,21 @@ http-response ^https?:\/\/api\.m\.jd\.com\/api\?functionId=delivery_show script-
 # >>>>>>>>>>>>>>> ✅ K ✅ <<<<<<<<<<<<<<
 # > Keep
 # 我的页面去推广
-http-response ^https?:\/\/api\.gotokeep\.com\/athena\/v\d\/people\/my$ script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/keep.js, requires-body=true, timeout=60, tag=keep
+#http-response ^https?:\/\/api\.gotokeep\.com\/athena\/v\d\/people\/my$ script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/keep.js, requires-body=true, timeout=60, tag=keep
 # 应用底部栏净化
-http-response ^https?:\/\/api\.gotokeep\.com\/config\/v\d\/basic script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/keep.js, requires-body=true, timeout=60, tag=keep
+#http-response ^https?:\/\/api\.gotokeep\.com\/config\/v\d\/basic script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/keep.js, requires-body=true, timeout=60, tag=keep
 # 发现页处理
-http-response ^https?:\/\/api\.gotokeep\.com\/homepage\/v\d\/tab script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/keep.js, requires-body=true, timeout=60, tag=keep
+#http-response ^https?:\/\/api\.gotokeep\.com\/homepage\/v\d\/tab script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/keep.js, requires-body=true, timeout=60, tag=keep
 # 课程预览页广告
-http-response ^https?:\/\/api\.gotokeep\.com\/nuocha\/course\/v\d/\w+\/preview script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/keep.js, requires-body=true, timeout=60, tag=keep
+#http-response ^https?:\/\/api\.gotokeep\.com\/nuocha\/course\/v\d/\w+\/preview script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/keep.js, requires-body=true, timeout=60, tag=keep
 # 我的运动页面去除下方推荐
-http-response ^https?:\/\/api\.gotokeep\.com\/sportpage\/sport\/v\d\/mysport script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/keep.js, requires-body=true, timeout=60, tag=keep
+#http-response ^https?:\/\/api\.gotokeep\.com\/sportpage\/sport\/v\d\/mysport script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/keep.js, requires-body=true, timeout=60, tag=keep
 
 # > 快手
-http-response ^https?:\/\/open\.e\.kuaishou\.com\/rest\/e\/v\d\/open\/univ$ script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/adsense.js, requires-body=true, timeout=60, tag=快手
+#http-response ^https?:\/\/open\.e\.kuaishou\.com\/rest\/e\/v\d\/open\/univ$ script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/adsense.js, requires-body=true, timeout=60, tag=快手
 
 # > 夸克
-http-response ^https?:\/\/open-cms-api\.(uc|quark)\.cn\/open-cms script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/quark.js, requires-body=true, timeout=60, tag=夸克
+#http-response ^https?:\/\/open-cms-api\.(uc|quark)\.cn\/open-cms script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/quark.js, requires-body=true, timeout=60, tag=夸克
 
 # > 酷安
 http-response ^https?:\/\/api\.coolapk\.com\/v6\/feed\/(detail|replyList)\? script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/coolapk.js, requires-body=true, timeout=60, tag=酷安
@@ -1197,12 +1197,12 @@ http-response ^https?:\/\/api\.coolapk\.com\/v6\/page\/dataList\? script-path=ht
 
 # >>>>>>>>>>>>>>> ✅ M ✅ <<<<<<<<<<<<<<
 # > 买单吧
-http-response ^https?:\/\/creditcardapp\.bankcomm\.(com|cn)\/rcg\/index\.html\?callbackurl=rcg\/index\.html&orclogin=1& script-path=https://raw.githubusercontent.com/zirawell/Ad-Cleaner/main/Collection/js/mdb.js, requires-body=true, timeout=60, tag=mdb
+#http-response ^https?:\/\/creditcardapp\.bankcomm\.(com|cn)\/rcg\/index\.html\?callbackurl=rcg\/index\.html&orclogin=1& script-path=https://raw.githubusercontent.com/zirawell/Ad-Cleaner/main/Collection/js/mdb.js, requires-body=true, timeout=60, tag=mdb
 
 # >>>>>>>>>>>>>>> ✅ Q ✅ <<<<<<<<<<<<<<
 # > 起点读书
 # 起点开屏页广告,每日导读去除,冷启动强制跳转精选页去除,去除发现页弹出的活动弹窗,去除下方(精选 发现 中间的)活动时的tab,去除书架右下角的活动/广告的悬浮icon,搜索页可以搜索用户
-http-response ^https?:\/\/magev6\.if\.qidian\.com\/argus\/api\/(v4\/client\/getsplashscreen|v2\/deeplink\/geturl|v1\/(client\/getconf|adv\/getadvlistbatch\?positions=iOS_tab|dailyrecommend\/getdailyrecommend)) script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/qidian.js, requires-body=true, timeout=60, tag=起点读书
+#http-response ^https?:\/\/magev6\.if\.qidian\.com\/argus\/api\/(v4\/client\/getsplashscreen|v2\/deeplink\/geturl|v1\/(client\/getconf|adv\/getadvlistbatch\?positions=iOS_tab|dailyrecommend\/getdailyrecommend)) script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/qidian.js, requires-body=true, timeout=60, tag=起点读书
 
 # >>>>>>>>>>>>>>> ✅ S ✅ <<<<<<<<<<<<<<
 # > Soul
