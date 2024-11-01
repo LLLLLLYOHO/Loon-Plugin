@@ -1,11 +1,11 @@
 #!name=WeChat增强——TT
-#!desc=DNS分流，内置WeChat分流，广告过滤(更新时间2024/10/29)，
+#!desc=DNS分流，内置WeChat分流
 #!author=TT[https://github.com/LLLLLLYOHO/Loon-Plugin]
 #!tag = WeChat增强——TT
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Weixin.png
 #!openUrl=https://apps.apple.com/app/id414478124
 #!loon_version = 3.2.3(762)
-#!date = 2024-11-02 00:21:54
+#!date = 2024-11-02 00:24:00
 [host]
 # > 腾讯
 # refer: https://www.dnspod.cn/products/publicdns
@@ -77,28 +77,3 @@ DOMAIN-SUFFIX,yun-hl.3g.qq.com,PROXY
 USER-AGENT,MicroMessenger*,PROXY
 USER-AGENT,WeChat*,PROXY
 IP-ASN,132203,PROXY,no-resolve
-
-[Rewrite]
-# 极兔快递 applets.jtexpress.com.cn
-^https:\/\/applets\.jtexpress\.com\.cn - reject-dict
-# 哈啰 api.hellobike.com
-^https:\/\/api\.hellobike\.com\/api\?adx - reject-dict
-# 申通快递 customer-app.sto.cn, sto-customer-app.oss-cn-shanghai.aliyuncs.co
-^https:\/\/customer-app\.sto\.cn\/api\/app\/banner\/banner - reject-dict
-^https:\/\/sto-customer-app\.oss-cn-shanghai\.aliyuncs\.com\/images - reject-dict
-# 奈雪 tm-api.pin-dao.cn
-^https:\/\/tm-api\.pin-dao\.cn\/home\/api\/index\/activeConfig\/v2 - reject-dict
-^https:\/\/tm-api\.pin-dao\.cn\/home\/api\/resource\/config\/homeBannerNodes - reject-dict
-# 蜜雪冰城 mxsa.mxbc.net
-^https:\/\/mxsa\.mxbc\.net\/api\/v1\/adinfo\/adplace\/query - reject-dict
-# 茶百道 cbd-gateway-service-applets.hualala.com
-^https:\/\/cbd-gateway-service-applets\.hualala\.com\/arch\/api\/banner\/QueryBannerImgList - reject-dict
-# 一点点 cappapi.alittle-tea.com, alittle-tea.oss-cn-shanghai.aliyuncs.com
-^https:\/\/alittle-tea\.oss-cn-shanghai\.aliyuncs\.com\/images\/platform\/alittle - reject-dict
-
-[Script]
-# 古茗 newton.gumingnc.com
-http-response ^https:\/\/newton\.gumingnc\.com\/newton-buyer\/newton\/buyer\/(ump|touch|external\/front) script-path=https://kelee.one/Resource/Script/WexinMiniPrograms/ming/ming.js, requires-body=true, tag=古茗去广告
-
-[MITM]
-hostname = applets.jtexpress.com.cn, api.hellobike.com, customer-app.sto.cn, sto-customer-app.oss-cn-shanghai.aliyuncs.co, tm-api.pin-dao.cn, mxsa.mxbc.net, cbd-gateway-service-applets.hualala.com, cappapi.alittle-tea.com, alittle-tea.oss-cn-shanghai.aliyuncs.com
