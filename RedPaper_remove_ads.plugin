@@ -1,7 +1,7 @@
 #!name = 小红书
 #!desc = TT自用——过滤信息流推广，移除图片及视频水印，如有异常，请先清楚缓存在尝试。
 #!author = TT[https://github.com/LLLLLLYOHO/Loon-Plugin]
-#!icon = https://raw.githubusercontent.com/RuCu6/Loon/main/Icons/app/xiaohongshu.png
+#!icon = https://raw.githubusercontent.com/LLLLLLYOHO/Loon-Icons/refs/heads/main/xiaohongshu.png
 #!date = 2024-10-15 10:45
 
 [Rule]
