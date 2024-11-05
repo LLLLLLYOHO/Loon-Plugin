@@ -4,7 +4,7 @@
 #!icon=https://raw.githubusercontent.com/LLLLLLYOHO/Loon-Icons/refs/heads/main/weibo.png
 #!tag=TT微博净化
 #!loon_version=3.2.3(762)
-#!date=2024-11-05 22:41:00
+#!date=2024-11-05 22:44:00
 
 [Rule]
 # 请求放行
@@ -58,9 +58,7 @@ http-response ^https:\/\/api\.weibo\.cn\/2\/comments\/build_comments\? script-pa
 http-response ^https:\/\/api\.weibo\.cn\/2\/(?:container\/asyn|flowlist|flowpage) script-path=https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body=true, tag=移除详情页广告
 http-response ^https:\/\/api\.weibo\.cn\/2\/(?:container\/asyn|flowlist|flowpage) script-path=https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body=true, tag=移除详情页广告
 #删除“container_timeline|”即可保留对方过往点赞记录，下方是原句
-#http-response ^https:\/\/api\.weibo\.cn\/2\/profile\/(?:container_timeline|dealatt|me|statuses\/tab|userinfo) script-path=https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body=true, tag=移除个人主页广告
-#http-response ^https:\/\/api\.weibo\.cn\/2\/profile\/(?:container_timeline|dealatt|me|statuses\/tab) script-path=https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body=true, tag=移除个人主页广告
-http-response ^https:\/\/api\.weibo\.cn\/2\/profile\/(?:container_timeline|dealatt|me|statuses\/userinfo) script-path=https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body=true, tag=移除个人主页广告
+http-response ^https:\/\/api\.weibo\.cn\/2\/profile\/(?:container_timeline|dealatt|me|statuses\/tab|userinfo) script-path=https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body=true, tag=移除个人主页广告
 #http-response ^https:\/\/api\.weibo\.cn\/2\/profile\/(?:dealatt|me|statuses\/tab|userinfo) script-path=https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body=true, tag=移除个人主页广告
 #http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/profile/(me|container_timeline) url script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js, requires-body=true, tag=取自墨鱼规则
 #以上是取自墨鱼的一条规则
