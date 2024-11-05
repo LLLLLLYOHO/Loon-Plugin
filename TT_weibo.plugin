@@ -4,7 +4,7 @@
 #!icon=https://raw.githubusercontent.com/LLLLLLYOHO/Loon-Icons/refs/heads/main/weibo.png
 #!tag=TT微博净化
 #!loon_version=3.2.3(762)
-#!date=2024-11-05 20:45:00
+#!date=2024-11-05 22:21:00
 
 [Rule]
 # 请求放行
@@ -27,7 +27,7 @@ URL-REGEX,^http:\/\/api\.weibo\.cn\/httpdns\/config,REJECT
 # 详情页 - 超话、评论区、看图界面、个人主页、我的页面、信息流、商品橱窗、视频流、视频号、视频调查、话题卡片
 ^https:\/\/api\.weibo\.cn\/2\/comments\/bullet_screens\? reject-dict
 ^https:\/\/api\.weibo\.cn\/2\/photo\/info\? reject-dict
-#^https:\/\/api\.weibo\.cn\/2\/statuses\/(?:container_positive|push_info) reject-dict
+^https:\/\/api\.weibo\.cn\/2\/statuses\/(?:container_positive|push_info) reject-dict
 ^https:\/\/api\.weibo\.cn\/2\/vote\/get_vote_detail\? reject-dict
 ^https:\/\/api\.weibo\.cn\/2\/!\/chaohua\/discovery\/home_bottom\/switch\? reject-dict
 ^https:\/\/api\.weibo\.cn\/2\/!\/huati\/(?:discovery_home_bottom_getdotinfo|mobile_discovery_searchchange) reject-dict
