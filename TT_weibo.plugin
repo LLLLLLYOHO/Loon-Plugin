@@ -4,7 +4,7 @@
 #!icon=https://raw.githubusercontent.com/LLLLLLYOHO/Loon-Icons/refs/heads/main/weibo.png
 #!tag=TT微博净化
 #!loon_version=3.2.3(762)
-#!date=2024-11-05 22:31:00
+#!date=2024-11-05 22:34:00
 
 [Rule]
 # 请求放行
@@ -62,7 +62,7 @@ http-response ^https:\/\/api\.weibo\.cn\/2\/(?:container\/asyn|flowlist|flowpage
 #http-response ^https:\/\/api\.weibo\.cn\/2\/profile\/(?:container_timeline|dealatt|me|statuses\/tab) script-path=https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body=true, tag=移除个人主页广告
 http-response ^https:\/\/api\.weibo\.cn\/2\/profile\/(?:container_timeline|dealatt|me|statuses\/userinfo) script-path=https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body=true, tag=移除个人主页广告
 #http-response ^https:\/\/api\.weibo\.cn\/2\/profile\/(?:dealatt|me|statuses\/tab|userinfo) script-path=https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body=true, tag=移除个人主页广告
-http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/profile/(me|container_timeline) url script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js, requires-body=true, tag=取自墨鱼规则
+#http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/profile/(me|container_timeline) url script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js, requires-body=true, tag=取自墨鱼规则
 #以上是取自墨鱼的一条规则
 http-response ^https:\/\/api\.weibo\.cn\/2\/shproxy\/chaohua\/discovery\/searchactive\? script-path=https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body=true, tag=移除超话搜索页广告
 http-response ^https:\/\/api\.weibo\.cn\/2\/statuses\/(?:container_timeline(?:_hot|_topic|_topicpage|_unread)?|repost_timeline|unread_hot_timeline) script-path=https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body=true, tag=移除信息流广告
