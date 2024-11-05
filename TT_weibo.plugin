@@ -4,7 +4,7 @@
 #!icon=https://raw.githubusercontent.com/LLLLLLYOHO/Loon-Icons/refs/heads/main/weibo.png
 #!tag=TT微博净化
 #!loon_version=3.2.3(762)
-#!date=2024-11-05 19:34:56
+#!date=2024-11-05 19:38:59
 
 [Rule]
 # 请求放行
@@ -16,8 +16,8 @@ DOMAIN-SUFFIX,biz.weibo.com,REJECT
 DOMAIN，dns.weibo.cn,REJECT
 IP-CIDR,39.97.130.51/32，REJECT,no-resolve
 IP-CIDR,39.97.128.148/32，REJECT,no-resolve
-URL-REGEX,^http:\/\/api\.weibo\.cn\/2\/httpdns\/config,REJECT
-URL-REGEX,^http:\/\/api\.weibo\.cn\/httpdns\/config,REJECT
+#URL-REGEX,^http:\/\/api\.weibo\.cn\/2\/httpdns\/config,REJECT
+#URL-REGEX,^http:\/\/api\.weibo\.cn\/httpdns\/config,REJECT
 
 # 首页 - 签到、发布按钮、侧边栏、右上角红包、顶部标签页、侧边栏提醒、超话标签页悬浮、顶部直播
 ^https:\/\/api\.weibo\.cn\/2\/(?:ug\/checkin\/list|push\/daily) reject-dict
@@ -27,7 +27,7 @@ URL-REGEX,^http:\/\/api\.weibo\.cn\/httpdns\/config,REJECT
 ^https:\/\/api\.weibo\.cn\/2\/comments\/bullet_screens\? reject-dict
 ^https:\/\/api\.weibo\.cn\/2\/photo\/info\? reject-dict
 ^https:\/\/api\.weibo\.cn\/2\/statuses\/(?:container_positive|push_info) reject-dict
-^https:\/\/api\.weibo\.cn\/2\/vote\/get_vote_detail\? reject-dict
+#^https:\/\/api\.weibo\.cn\/2\/vote\/get_vote_detail\? reject-dict
 ^https:\/\/api\.weibo\.cn\/2\/!\/chaohua\/discovery\/home_bottom\/switch\? reject-dict
 ^https:\/\/api\.weibo\.cn\/2\/!\/huati\/(?:discovery_home_bottom_getdotinfo|mobile_discovery_searchchange) reject-dict
 ^https:\/\/api\.weibo\.cn\/2\/!\/wbox\/\w+\/(?:home_bottom_modal|interest_category) reject-dict
@@ -74,3 +74,6 @@ http-response ^https:\/\/api\.weibo\.cn\/2\/searchall\? script-path=https://kele
 http-response ^https:\/\/bootpreload\.uve\.weibo\.com\/v[12]\/ad\/preload script-path=https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body=true, tag=移除开屏广告
 http-response ^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkad\.php script-path=https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body=true, tag=移除开屏广告
 http-response ^https:\/\/wbapp\.uve\.weibo\.com\/(?:preload\/get_ad|wbapplua\/wbpullad\.lua) script-path=https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body=true, tag=移除开屏广告
+
+[MITM]
+hostname = *.weibo.cn, *.weibo.com, weibo.com
