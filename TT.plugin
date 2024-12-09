@@ -6,7 +6,7 @@
 #!system_version = 
 #!loon_version = 3.2.4(787)
 #!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Advertising.png
-#!date = 2024-11-28 00:00:00
+#!date = 2024-12-10 00:00:00
 #!support=支持多款款APP/小程序
 #!remark=下方的所有规则都标注了对应的hostname，可能存在错误或者遗漏，欢迎反馈。对于无法/可选MITM的hostname都特别做了“如开启可自行添加主机名”提示，如果提示后面没有标注主机名则包含所有主机名，否则只包含提示语后面的主机名。
 #############################################
@@ -42,8 +42,8 @@ DOMAIN, sytoss-market.oss-cn-shenzhen.aliyuncs.com, REJECT
 AND, ((DOMAIN-KEYWORD, -ad-), (DOMAIN-SUFFIX, byteimg.com)), REJECT
 AND, ((DOMAIN-KEYWORD, -ttam-), (DOMAIN-SUFFIX, ibyteimg.com)), REJECT
 AND, ((DOMAIN-KEYWORD, ssdk-), (DOMAIN-SUFFIX, pangle.io)), REJECT
-AND, ((DOMAIN-KEYWORD, pangolin), (DOMAIN-SUFFIX, sgsnssdk.com)), REJECT
-AND, ((DOMAIN-KEYWORD, lf), (DOMAIN-KEYWORD, -short.bytetos.com)), REJECT
+#AND, ((DOMAIN-KEYWORD, pangolin), (DOMAIN-SUFFIX, sgsnssdk.com)), REJECT
+#AND, ((DOMAIN-KEYWORD, lf), (DOMAIN-KEYWORD, -short.bytetos.com)), REJECT
 AND, ((DOMAIN-KEYWORD, v), (DOMAIN-KEYWORD, -be-pack.pglstatp-toutiao.com)), REJECT
 AND, ((DOMAIN-KEYWORD, sf), (DOMAIN-KEYWORD, -be-pack.pglstatp-toutiao.com)), REJECT
 AND, ((DOMAIN-KEYWORD, s), (DOMAIN-KEYWORD, -fe-scm.pglstatp-toutiao.com)), REJECT
@@ -64,27 +64,27 @@ AND, ((DOMAIN-KEYWORD, ads), (DOMAIN-KEYWORD, -normal-lq), (DOMAIN-SUFFIX, zijie
 # AND, ((DOMAIN-KEYWORD, if), (DOMAIN-KEYWORD, -cdn-tos.bytescm.com)), REJECT //误杀
 URL-REGEX, "^http:\/\/p\d+-be-pack-sign\.pglstatp-toutiao\.com\/(ad-app-package|web\.business\.image)\/", REJECT
 DOMAIN, mon.zijieapi.com, REJECT
-DOMAIN, i.snssdk.com, REJECT
-DOMAIN, is.snssdk.com, REJECT
-DOMAIN, bds.snssdk.com, REJECT
+#DOMAIN, i.snssdk.com, REJECT
+#DOMAIN, is.snssdk.com, REJECT
+#DOMAIN, bds.snssdk.com, REJECT
 DOMAIN, dm.bytedance.com, REJECT
-DOMAIN, dm.pstatp.com, REJECT
-DOMAIN, dm.toutiao.com, REJECT
-DOMAIN, log.snssdk.com, REJECT
-DOMAIN, s3a.pstatp.com, REJECT
-DOMAIN, sdfp.snssdk.com, REJECT
+#DOMAIN, dm.pstatp.com, REJECT
+#DOMAIN, dm.toutiao.com, REJECT
+#DOMAIN, log.snssdk.com, REJECT
+#DOMAIN, s3a.pstatp.com, REJECT
+#DOMAIN, sdfp.snssdk.com, REJECT
 DOMAIN, tosv.boe.byted.org, REJECT
 DOMAIN, tosv.byted.org, REJECT
-DOMAIN, extlog.snssdk.com, REJECT
+#DOMAIN, extlog.snssdk.com, REJECT
 DOMAIN, mssdk-bu.bytedance.com, REJECT
 DOMAIN, toblog.ctobsnssdk.com, REJECT
 DOMAIN, mssdk.volces.com, REJECT
-DOMAIN, pangolin.snssdk.com, REJECT
+#DOMAIN, pangolin.snssdk.com, REJECT
 DOMAIN, gromore.pangolin-sdk-toutiao.com, REJECT
 DOMAIN-KEYWORD, -ad-sign.byteimg.com, REJECT
 DOMAIN-KEYWORD, log-api.pangolin-sdk-toutiao, REJECT
 DOMAIN-KEYWORD, -ad.byteoversea.com, REJECT
-DOMAIN-KEYWORD, video-cn.snssdk.com, REJECT
+#DOMAIN-KEYWORD, video-cn.snssdk.com, REJECT
 DOMAIN-KEYWORD, asiad.byteactivity, REJECT
 
 # >>>>>>>>>>>>>>> ✅ W ✅ <<<<<<<<<<<<<<
