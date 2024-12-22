@@ -33,6 +33,11 @@
 # >>>>>>>>>>>>>>> ✅ 自用补充添加 ✅ <<<<<<<<<<<<<<
 #卓远机场分流
 DOMAIN, fbapiv2.fbsublink.com, PROXY
+# APP"bad.news"分流
+DOMAIN-KEYWORD, bad.news, PROXY
+#可莉站点分流
+DOMAIN-KEYWORD, kelee.one, DIRECT
+
 
 # >>>>>>>>>>>>>>> ✅ B ✅ <<<<<<<<<<<<<<
 #禁用 STUN 
