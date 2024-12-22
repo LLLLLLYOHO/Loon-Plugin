@@ -6,7 +6,7 @@
 #!system_version = 
 #!loon_version = 3.2.5(797)
 #!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Advertising.png
-#!date = 2024-12-15 00:00:00
+#!date = 2024-12-22 22:30:00
 #!support=支持多款款APP/小程序
 #!remark=下方的所有规则都标注了对应的hostname，可能存在错误或者遗漏，欢迎反馈。对于无法/可选MITM的hostname都特别做了“如开启可自行添加主机名”提示，如果提示后面没有标注主机名则包含所有主机名，否则只包含提示语后面的主机名。
 #############################################
@@ -30,6 +30,10 @@
 
 
 [Rule]
+# >>>>>>>>>>>>>>> ✅ 自用补充添加 ✅ <<<<<<<<<<<<<<
+#卓远机场分流
+DOMAIN, fbapiv2.fbsublink.com, PROXY
+
 # >>>>>>>>>>>>>>> ✅ B ✅ <<<<<<<<<<<<<<
 #禁用 STUN 
 #开启后，可以避免一些P2P请求，可以防止B站之类的白嫖上传
