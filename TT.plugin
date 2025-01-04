@@ -6,7 +6,7 @@
 #!system_version = 
 #!loon_version = 3.2.4(787)
 #!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Advertising.png
-#!date = 2025-01-04 17:22:00
+#!date = 2025-01-04 19:45:00
 #!support=支持多款款APP/小程序
 #!remark=下方的所有规则都标注了对应的hostname，可能存在错误或者遗漏，欢迎反馈。对于无法/可选MITM的hostname都特别做了“如开启可自行添加主机名”提示，如果提示后面没有标注主机名则包含所有主机名，否则只包含提示语后面的主机名。
 #############################################
@@ -37,8 +37,6 @@ DOMAIN, fbapiv2.fbsublink.com, PROXY
 DOMAIN-KEYWORD, bad.news, PROXY
 #可莉站点分流
 DOMAIN-KEYWORD, kelee.one, DIRECT
-#保险站点分流
-DOMAIN-KEYWORD, aibaoxian.com, DIRECT
 #验货分流
 DOMAIN, mass-light.com, PROXY
 DOMAIN, eprel.ec.europa.eu, DIRECT
