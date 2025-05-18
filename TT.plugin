@@ -6,7 +6,7 @@
 #!system_version = 
 #!loon_version = 3.2.4(787)
 #!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Advertising.png
-#!date = 2025-05-17 15:28:00
+#!date = 2025-05-18 18:42:00
 #!support=支持多款款APP/小程序
 #!remark=下方的所有规则都标注了对应的hostname，可能存在错误或者遗漏，欢迎反馈。对于无法/可选MITM的hostname都特别做了“如开启可自行添加主机名”提示，如果提示后面没有标注主机名则包含所有主机名，否则只包含提示语后面的主机名。
 #############################################
@@ -682,9 +682,9 @@ DOMAIN-KEYWORD, asiad.byteactivity, REJECT
 ^https?:\/\/mlife\.jf365\.boc\.cn\/AppPrj\/FirstPic\.do\?txnId=2PIC000001 reject-200
 
 # > 中国移动
-^https:\/\/res\.app\.coc\.10086\.cn\/qwhdcdn_cmcc-cs_cn\/prd-mgcenter\/*.gif
-^https:\/\/qwhdcdn\.cmcc-cs.cn\/prd-mgcenter\/*.gif
-^https:\/\/res\.coc\.10086\.cn\/res\/cdn\/coc1\/d\/d\/d\/d\/*.gif
+^https:\/\/res\.app\.coc\.10086\.cn\/qwhdcdn_cmcc-cs_cn\/prd-mgcenter\/*.gif reject
+^https:\/\/qwhdcdn\.cmcc-cs.cn\/prd-mgcenter\/*.gif reject
+^https:\/\/res\.coc\.10086\.cn\/res\/cdn\/coc1\/d\/d\/d\/d\/*.gif reject
 
 # > 中国联通
 # hostname = m.client.10010.com, m1.ad.10010.com, res.mall.10010.cn
