@@ -6,7 +6,7 @@
 #!system_version = 
 #!loon_version = 3.2.4(787)
 #!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Advertising.png
-#!date=2025-12-05 00:37:00
+#!date=2025-12-05 16:57:00
 #!support=支持多款款APP/小程序
 #!remark=下方的所有规则都标注了对应的hostname，可能存在错误或者遗漏，欢迎反馈。对于无法/可选MITM的hostname都特别做了“如开启可自行添加主机名”提示，如果提示后面没有标注主机名则包含所有主机名，否则只包含提示语后面的主机名。
 #############################################
@@ -27,6 +27,9 @@
 # 3️⃣：Loon如果在插件里面写了规则，在规则配置里也写了，哪个优先生效？
 # ✅：插件里的规则优先生效。
 #############################################
+
+[Host]
+hostname = midc.cdn-static.abchina.com.cn, enjoy.cdn-static.abchina.com, pss.txffp.com, 62578.activity-12.m.duiba.com.cn, ecard.shenzhentong.com, ccmsupport-sz.tenpay.com, otheve.beacon.qq.com, www.tailgdd.com, cds.wifi188.com, home.mi.com, ocrifs.ejoy.sinopec.com, ne.gdsz.sinopec.com, a.sinopecsales.com, webappcfg.paas.cmbchina.com, mbmodule-openapi.paas.cmbchina.com, mlife.jf365.boc.cn, m.client.10010.com, m1.ad.10010.com, res.mall.10010.cn, cloud.189.cn, zt-app.go189.cn, app.10099.com.cn, e.weather.com.cn, zgrb.epicc.com.cn, sichuan.95504.net, app-gw-link.ztehome.com
 
 
 [Rule]
@@ -55,12 +58,6 @@ IP-CIDR,95.161.76.100/31,REJECT-NO-DROP,no-resolve
 #禁用 STUN 
 #开启后，可以避免一些P2P请求，可以防止B站之类的白嫖上传
 AND, ((PROTOCOL, STUN), (DOMAIN-KEYWORD, bilibili.)), REJECT
-
-# >>>>>>>>>>>>>>> ✅ Z ✅ <<<<<<<<<<<<<<
-# > 广汽本田
-# hostname = gha.ghac.cn(添加hostname会导致服务错误), ghacdn.ghac.cn
-#^https?:\/\/gha\.ghac\.cn\:8081\/base\/app\/api\/ad\/query\?adType=1 reject-200
-#^https?:\/\/ghacdn\.ghac\.cn\/doc\/attachment\/1010\/202301\/6d418958b7854bdfb28f28402295bbaf\.jpg url reject
 
 # > 农业银行
 # hostname = midc.cdn-static.abchina.com.cn, enjoy.cdn-static.abchina.com
@@ -110,7 +107,7 @@ AND, ((PROTOCOL, STUN), (DOMAIN-KEYWORD, bilibili.)), REJECT
 ^https?:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation\/(banner|carousel\/banners|myTab|openingBanner) reject-dict
 
 # > 易捷加油小程序
-# hostname = ocrifs.ejoy.sinopec.com
+# hostname = ocrifs.ejoy.sinopec.com, ne.gdsz.sinopec.com
 # 底部横幅广告
 ^https?:\/\/ocrifs\.ejoy\.sinopec\.com\/advertitfs\/advert\/findAdvertInfo reject-dict
 # 去除红包弹窗
