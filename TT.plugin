@@ -6,7 +6,7 @@
 #!system_version = 
 #!loon_version = 3.2.4(787)
 #!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Advertising.png
-#!date=2025-12-05 16:57:00
+#!date=2025-12-05 17:00:00
 #!support=支持多款款APP/小程序
 #!remark=下方的所有规则都标注了对应的hostname，可能存在错误或者遗漏，欢迎反馈。对于无法/可选MITM的hostname都特别做了“如开启可自行添加主机名”提示，如果提示后面没有标注主机名则包含所有主机名，否则只包含提示语后面的主机名。
 #############################################
@@ -28,7 +28,7 @@
 # ✅：插件里的规则优先生效。
 #############################################
 
-[Host]
+[MITM]
 hostname = midc.cdn-static.abchina.com.cn, enjoy.cdn-static.abchina.com, pss.txffp.com, 62578.activity-12.m.duiba.com.cn, ecard.shenzhentong.com, ccmsupport-sz.tenpay.com, otheve.beacon.qq.com, www.tailgdd.com, cds.wifi188.com, home.mi.com, ocrifs.ejoy.sinopec.com, ne.gdsz.sinopec.com, a.sinopecsales.com, webappcfg.paas.cmbchina.com, mbmodule-openapi.paas.cmbchina.com, mlife.jf365.boc.cn, m.client.10010.com, m1.ad.10010.com, res.mall.10010.cn, cloud.189.cn, zt-app.go189.cn, app.10099.com.cn, e.weather.com.cn, zgrb.epicc.com.cn, sichuan.95504.net, app-gw-link.ztehome.com
 
 
@@ -53,7 +53,7 @@ IP-CIDR,fc00::/18,DIRECT
 #防止TG加载转圈
 IP-CIDR,95.161.76.100/31,REJECT-NO-DROP,no-resolve
 
-
+[Rewrite]
 # >>>>>>>>>>>>>>> ✅ B ✅ <<<<<<<<<<<<<<
 #禁用 STUN 
 #开启后，可以避免一些P2P请求，可以防止B站之类的白嫖上传
