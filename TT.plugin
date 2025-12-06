@@ -1,12 +1,12 @@
 #!name = TT广告过滤器
-#!desc = TT自用的广告过滤器
+#!desc = TT自用的广告过滤器, 某些APP要清除缓存或者重新安装
 #!author = TT[https://github.com/LLLLLLYOHO/Loon-Plugin]
-#!tag = 去广告
-#!system = 
+#!tag = 去广告, TT
+#!system=iOS, iPadOS
 #!system_version = 
 #!loon_version = 3.2.4(787)
 #!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Advertising.png
-#!date=2025-12-05 17:00:00
+#!date=2025-12-06 21:23:00
 #!support=支持多款款APP/小程序
 #!remark=下方的所有规则都标注了对应的hostname，可能存在错误或者遗漏，欢迎反馈。对于无法/可选MITM的hostname都特别做了“如开启可自行添加主机名”提示，如果提示后面没有标注主机名则包含所有主机名，否则只包含提示语后面的主机名。
 #############################################
@@ -31,7 +31,6 @@
 [MITM]
 hostname = midc.cdn-static.abchina.com.cn, enjoy.cdn-static.abchina.com, pss.txffp.com, 62578.activity-12.m.duiba.com.cn, ecard.shenzhentong.com, ccmsupport-sz.tenpay.com, otheve.beacon.qq.com, www.tailgdd.com, cds.wifi188.com, home.mi.com, ocrifs.ejoy.sinopec.com, ne.gdsz.sinopec.com, a.sinopecsales.com, webappcfg.paas.cmbchina.com, mbmodule-openapi.paas.cmbchina.com, mlife.jf365.boc.cn, m.client.10010.com, m1.ad.10010.com, res.mall.10010.cn, cloud.189.cn, zt-app.go189.cn, app.10099.com.cn, e.weather.com.cn, zgrb.epicc.com.cn, sichuan.95504.net, app-gw-link.ztehome.com
 
-
 [Rule]
 # >>>>>>>>>>>>>>> ✅ 自用补充添加 ✅ <<<<<<<<<<<<<<
 #卓远机场分流
@@ -46,10 +45,10 @@ DOMAIN, eprel.ec.europa.eu, DIRECT
 DOMAIN-KEYWORD, welltec.pro, DIRECT
 #自添加 一些未知的
 DOMAIN, sentry.aibaoxian.com, DIRECT
-IP-CIDR,28.0.0.1/8,DIRECT
-IP-CIDR,198.18.0.1/16,DIRECT
-IP-CIDR,198.18.0.0/15,DIRECT
-IP-CIDR,fc00::/18,DIRECT
+IP-CIDR, 28.0.0.1/8,DIRECT
+IP-CIDR, 198.18.0.1/16,DIRECT
+IP-CIDR, 198.18.0.0/15,DIRECT
+IP-CIDR, fc00::/18,DIRECT
 #防止TG加载转圈
 IP-CIDR,95.161.76.100/31,REJECT-NO-DROP,no-resolve
 
@@ -64,7 +63,6 @@ AND, ((PROTOCOL, STUN), (DOMAIN-KEYWORD, bilibili.)), REJECT
 ^https?:\/\/midc\.cdn-static\.abchina\.com\.cn\/distributecenterimg\/file\/download\/(?!bbc2|f015|1655|0992|4678|a194|d8e2|c513|e51c|0ee1|166e|05ca|c882|d5b8|22ed|a0dc|a55a|6f89|3bf9|3c71|52ec|5b62|ve7a|001c|923d|accf|4a10|0bd7|be7a|5b62|5dd6|1f24|006c|775d|bd02|b983|5251|806b|d119|db14|43c9|41d3|8570|2c10|85ea|1435|814e|f422|aec7|738c|d7c8|0538|02b4|fd20|7647|f6ef|07c5|885b|e4cb|685b|30aa|c23b|9603|f27f|eaf8|8011|a5eb|409d|724c|3f2a|e07f|6744|60a6|158c|8ce3) reject-dict
 ^https?:\/\/enjoy\.cdn-static\.abchina\.com\/yx-engine-web\/file\/download\/(?!7dc2|fe96|cea3|06a8|1b11|d57b|6918|61db|2d58|aa23|) reject-200
 ^https?:\/\/firefly\.abchina\.com\.cn\/firefly-collection\/Collect reject-200
-
 
 #票根  启动广告
 # hostname = pss.txffp.com, 62578.activity-12.m.duiba.com.cn
@@ -81,7 +79,6 @@ AND, ((PROTOCOL, STUN), (DOMAIN-KEYWORD, bilibili.)), REJECT
 # hostname = ecard.shenzhentong.com
 ^https?:\/\/ecard\.shenzhentong\.com\/wxweb\/bwxppub2\/QryAdvertList\.do reject-200
 
-
 # > 腾讯乘车码微信小程序
 # hostname = ccmsupport-sz.tenpay.com
 # 感谢【jinlvei】分享
@@ -90,7 +87,6 @@ AND, ((PROTOCOL, STUN), (DOMAIN-KEYWORD, bilibili.)), REJECT
 # > 腾讯手机管家
 # hostname = otheve.beacon.qq.com
 ^https?://otheve.beacon.qq.com\/analytics\/upload\?sid=.* reject
-
 
 # > 台铃智能 开屏广告
 # hostname = www.tailgdd.com
