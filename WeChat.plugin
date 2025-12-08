@@ -6,10 +6,10 @@
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Weixin.png
 #!openUrl=https://apps.apple.com/app/id414478124
 #!loon_version = 3.2.4(787)
-#!date = 2025-12-08 23:20:00
+#!date = 2025-12-08 23:32:00
 #!support=支持微信
 
-[MitM]
+[Host]
 # > 腾讯
 # refer: https://www.dnspod.cn/products/publicdns
 *.tencent.com = server:https://doh.pub/dns-query
