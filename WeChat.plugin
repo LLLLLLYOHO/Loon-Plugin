@@ -6,42 +6,43 @@
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Weixin.png
 #!openUrl=https://apps.apple.com/app/id414478124
 #!loon_version = 3.2.4(787)
-#!date = 2025-12-08 23:32:00
+#!date = 2025-12-08 23:38:00
 #!support=支持微信
 
+##########以下内容已添加本地配置##############
 [Host]
 # > 腾讯
 # refer: https://www.dnspod.cn/products/publicdns
-*.tencent.com = server:https://doh.pub/dns-query
+#*.tencent.com = server:https://doh.pub/dns-query
 # QQ
-*.qq.com = server:https://doh.pub/dns-query
+#*.qq.com = server:https://doh.pub/dns-query
 # 腾讯头像
-*.qlogo.cn = server:https://doh.pub/dns-query
+#*.qlogo.cn = server:https://doh.pub/dns-query
 # 腾讯图片
-*.qpic.cn = server:https://doh.pub/dns-query
+#*.qpic.cn = server:https://doh.pub/dns-query
 # 微信
-*.weixin.qq.com = server:https://doh.pub/dns-query
-*.wx.qq.com = server:https://doh.pub/dns-query
-*.weixin.com = server:https://doh.pub/dns-query
+#*.weixin.qq.com = server:https://doh.pub/dns-query
+#*.wx.qq.com = server:https://doh.pub/dns-query
+#*.weixin.com = server:https://doh.pub/dns-query
 # 微信公众平台
-*.weixinbridge.com = server:https://doh.pub/dns-query
+#*.weixinbridge.com = server:https://doh.pub/dns-query
 # WeChat
-*.wechat.com = server:https://doh.pub/dns-query
+#*.wechat.com = server:https://doh.pub/dns-query
 # 微信小程序
-*.servicewechat.com = server:https://doh.pub/dns-query
+#*.servicewechat.com = server:https://doh.pub/dns-query
 # 微云
-*.weiyun.com = server:https://doh.pub/dns-query
+#*.weiyun.com = server:https://doh.pub/dns-query
 # 腾讯 图片 静态资源
-*.gtimg.cn = server:https://doh.pub/dns-query
-*.idqqimg.com = server:https://doh.pub/dns-query
+#*.gtimg.cn = server:https://doh.pub/dns-query
+#*.idqqimg.com = server:https://doh.pub/dns-query
 # 腾讯 静态资源 CDN
-*.cdn-go.cn = server:https://doh.pub/dns-query
+#*.cdn-go.cn = server:https://doh.pub/dns-query
 # 腾讯云 智能云解析DNS
-*.smtcdns.com = server:https://doh.pub/dns-query
-*.smtcdns.net = server:https://doh.pub/dns-query
+#*.smtcdns.com = server:https://doh.pub/dns-query
+#*.smtcdns.net = server:https://doh.pub/dns-query
 # 腾讯短网址
-url.cn = server:https://doh.pub/dns-query
-
+#url.cn = server:https://doh.pub/dns-query
+##########以上内容已添加本地配置##############
 
 [Rule]
 # 广告过滤
