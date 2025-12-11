@@ -6,7 +6,7 @@
 #!system_version = 
 #!loon_version = 3.2.4(787)
 #!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Advertising.png
-#!date=2025-12-06 21:23:00
+#!date=2025-12-11 23:25:00
 #!support=支持多款款APP/小程序
 #!remark=下方的所有规则都标注了对应的hostname，可能存在错误或者遗漏，欢迎反馈。对于无法/可选MITM的hostname都特别做了“如开启可自行添加主机名”提示，如果提示后面没有标注主机名则包含所有主机名，否则只包含提示语后面的主机名。
 #############################################
@@ -45,12 +45,14 @@ DOMAIN, eprel.ec.europa.eu, DIRECT
 DOMAIN-KEYWORD, welltec.pro, DIRECT
 #自添加 一些未知的
 DOMAIN, sentry.aibaoxian.com, DIRECT
-IP-CIDR, 28.0.0.1/8,DIRECT
-IP-CIDR, 198.18.0.1/16,DIRECT
-IP-CIDR, 198.18.0.0/15,DIRECT
-IP-CIDR, fc00::/18,DIRECT
+IP-CIDR, 28.0.0.1/8, DIRECT
+IP-CIDR, 198.18.0.1/16, DIRECT
+IP-CIDR, 198.18.0.0/15, DIRECT
+IP-CIDR, fc00::/18, DIRECT
 #防止TG加载转圈
-IP-CIDR,95.161.76.100/31,REJECT-NO-DROP,no-resolve
+IP-CIDR, 95.161.76.100/31,REJECT-NO-DROP, no-resolve
+#票根(开屏摇一摇广告)@TT
+DOMAIN, api.yfanads.com, REJECT
 
 [Rewrite]
 # >>>>>>>>>>>>>>> ✅ B ✅ <<<<<<<<<<<<<<
@@ -64,7 +66,7 @@ AND, ((PROTOCOL, STUN), (DOMAIN-KEYWORD, bilibili.)), REJECT
 ^https?:\/\/enjoy\.cdn-static\.abchina\.com\/yx-engine-web\/file\/download\/(?!7dc2|fe96|cea3|06a8|1b11|d57b|6918|61db|2d58|aa23|) reject-200
 ^https?:\/\/firefly\.abchina\.com\.cn\/firefly-collection\/Collect reject-200
 
-#票根  启动广告
+#票根  启动广告@TT
 # hostname = pss.txffp.com, 62578.activity-12.m.duiba.com.cn
 ^https?:\/\/pss\.txffp\.com\/piaogen\/images\/launchScreen/ url reject-200
 #票根  首页轮播图, 资讯图片
@@ -72,6 +74,7 @@ AND, ((PROTOCOL, STUN), (DOMAIN-KEYWORD, bilibili.)), REJECT
 #票根  首页中间抽奖图
 ^https:\/\/pss\.txffp\.com\/piaogen\/images\/invoiceEmailAdvert\/0f2b2b78353c4831bbab24430d59685c\.png url reject
 ^https:\/\/pss\.txffp\.com\/piaogen\/images\/invoiceEmailAdvert\/ee8e954f6d10454692b6e67128e119ed\.png url reject
+^https:\/\/pss\.txffp\.com\/piaogen\/images\/invoiceEmailAdvert\/8125d0c985584e51866f53d4a2f62c05\.png url reject
 #票根  首页中间抽奖跳转链接  - 62578.activity-12.m.duiba.com.cn
 ^https:\/\/62578\.activity-12\.m\.duiba\.com\.cn\/autoLogin\/autologin url reject
 
