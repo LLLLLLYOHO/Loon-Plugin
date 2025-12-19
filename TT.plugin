@@ -6,7 +6,7 @@
 #!system_version = 
 #!loon_version = 3.2.4(787)
 #!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Advertising.png
-#!date=2025-12-19 23:52:00
+#!date=2025-12-20 00:16:00
 #!support=支持多款款APP/小程序
 #!remark=下方的所有规则都标注了对应的hostname，可能存在错误或者遗漏，欢迎反馈。对于无法/可选MITM的hostname都特别做了“如开启可自行添加主机名”提示，如果提示后面没有标注主机名则包含所有主机名，否则只包含提示语后面的主机名。
 #############################################
@@ -51,10 +51,6 @@ IP-CIDR, 198.18.0.0/15, DIRECT
 IP-CIDR, fc00::/18, DIRECT
 #防止TG加载转圈
 IP-CIDR, 95.161.76.100/31,REJECT-NO-DROP, no-resolve
-#票根(开屏摇一摇广告)@TT
-DOMAIN, api.yfanads.com, REJECT
-#随机数app内置广告
-DOMAIN-KEYWORD, googleads.g.doubleclick.net, REJECT
 
 [Rewrite]
 # >>>>>>>>>>>>>>> ✅ B ✅ <<<<<<<<<<<<<<
