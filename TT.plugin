@@ -6,7 +6,7 @@
 #!system_version = 
 #!loon_version = 3.2.4(787)
 #!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Advertising.png
-#!date=2025-12-21 17:32:50
+#!date=2025-12-21 17:41:42
 #!support=支持多款款APP/小程序
 #!remark=下方的所有规则都标注了对应的hostname，可能存在错误或者遗漏，欢迎反馈。对于无法/可选MITM的hostname都特别做了“如开启可自行添加主机名”提示，如果提示后面没有标注主机名则包含所有主机名，否则只包含提示语后面的主机名。
 #############################################
@@ -70,7 +70,7 @@ AND, ((PROTOCOL, STUN), (DOMAIN-KEYWORD, bilibili.)), REJECT
 # >>>>>>>>>>>>>>> ✅ C ✅ <<<<<<<<<<<<<<
 # > 车主惠(洗车网页)
 # hostname = smsp.epicc.com.cn
-^https?:\/\/smsp\.epicc\.com\.cn\/branches\/webpage\/webpage\/center_xjg\/dist\/mobile\/wechat\/static\/img\/friendlove2\.bf388aa5\.png url reject
+^https?:\/\/smsp\.epicc\.com\.cn\/branches\/webpage\/webpage\/center_xjg\/dist\/mobile\/wechat\/static\/img\/friendlove2\.bf388aa5\.png reject-img
 
 # >>>>>>>>>>>>>>> ✅ D ✅ <<<<<<<<<<<<<<
 # > 钉钉
@@ -98,15 +98,15 @@ AND, ((PROTOCOL, STUN), (DOMAIN-KEYWORD, bilibili.)), REJECT
 # >>>>>>>>>>>>>>> ✅ P ✅ <<<<<<<<<<<<<<
 #票根  启动广告@TT
 # hostname = pss.txffp.com, 62578.activity-12.m.duiba.com.cn
-^https?:\/\/pss\.txffp\.com\/piaogen\/images\/launchScreen/ url reject-200
+^https?:\/\/pss\.txffp\.com\/piaogen\/images\/launchScreen/ reject-200
 #票根  首页轮播图, 资讯图片
-^https:\/\/pss\.txffp\.com\/piaogen\/images\/advert\/.*.(jpg|gif|png) url reject
+^https:\/\/pss\.txffp\.com\/piaogen\/images\/advert\/.*.(jpg|gif|png) reject
 #票根  首页中间抽奖图
-^https:\/\/pss\.txffp\.com\/piaogen\/images\/invoiceEmailAdvert\/0f2b2b78353c4831bbab24430d59685c\.png url reject
-^https:\/\/pss\.txffp\.com\/piaogen\/images\/invoiceEmailAdvert\/ee8e954f6d10454692b6e67128e119ed\.png url reject
-^https:\/\/pss\.txffp\.com\/piaogen\/images\/invoiceEmailAdvert\/8125d0c985584e51866f53d4a2f62c05\.png url reject
+^https:\/\/pss\.txffp\.com\/piaogen\/images\/invoiceEmailAdvert\/0f2b2b78353c4831bbab24430d59685c\.png reject
+^https:\/\/pss\.txffp\.com\/piaogen\/images\/invoiceEmailAdvert\/ee8e954f6d10454692b6e67128e119ed\.png reject
+^https:\/\/pss\.txffp\.com\/piaogen\/images\/invoiceEmailAdvert\/8125d0c985584e51866f53d4a2f62c05\.png reject
 #票根  首页中间抽奖跳转链接  - 62578.activity-12.m.duiba.com.cn
-^https:\/\/62578\.activity-12\.m\.duiba\.com\.cn\/autoLogin\/autologin url reject
+^https:\/\/62578\.activity-12\.m\.duiba\.com\.cn\/autoLogin\/autologin reject
 
 # >>>>>>>>>>>>>>> ✅ S ✅ <<<<<<<<<<<<<<
 # > 深圳通
@@ -125,7 +125,7 @@ AND, ((PROTOCOL, STUN), (DOMAIN-KEYWORD, bilibili.)), REJECT
 
 # > 台铃智能 开屏广告
 # hostname = www.tailgdd.com
-^https?:\/\/www\.tailgdd\.com\/v8\/smart\/app\/config\/get url reject-dict
+^https?:\/\/www\.tailgdd\.com\/v8\/smart\/app\/config\/get reject-dict
 
 # >>>>>>>>>>>>>>> ✅ W ✅ <<<<<<<<<<<<<<
 # > WIFI万能钥匙
