@@ -6,7 +6,7 @@
 #!system_version = 
 #!loon_version = 3.2.4(787)
 #!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Advertising.png
-#!date=2025-12-21 17:28:00
+#!date=2025-12-21 17:30:00
 #!support=支持多款款APP/小程序
 #!remark=下方的所有规则都标注了对应的hostname，可能存在错误或者遗漏，欢迎反馈。对于无法/可选MITM的hostname都特别做了“如开启可自行添加主机名”提示，如果提示后面没有标注主机名则包含所有主机名，否则只包含提示语后面的主机名。
 #############################################
@@ -70,7 +70,7 @@ AND, ((PROTOCOL, STUN), (DOMAIN-KEYWORD, bilibili.)), REJECT
 # >>>>>>>>>>>>>>> ✅ C ✅ <<<<<<<<<<<<<<
 # > 车主惠(洗车网页)
 # hostname = smsp.epicc.com.cn
-^https?:\/\/smsp\.epicc\.com\.cn\/branches\/webpage\/webpage\/center_xjg\/dist\/mobile\/wechat\/static\/img\/friendlove2.bf388aa5\.png url reject
+^https?:\/\/smsp\.epicc\.com\.cn\/branches\/webpage\/webpage\/center_xjg\/dist\/mobile\/wechat\/static\/img\/friendlove2\.bf388aa5\.png url reject
 
 # >>>>>>>>>>>>>>> ✅ D ✅ <<<<<<<<<<<<<<
 # > 钉钉
