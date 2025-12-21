@@ -6,7 +6,7 @@
 #!system_version = 
 #!loon_version = 3.2.4(787)
 #!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Advertising.png
-#!date=2025-12-21 17:10:00
+#!date=2025-12-21 17:28:00
 #!support=支持多款款APP/小程序
 #!remark=下方的所有规则都标注了对应的hostname，可能存在错误或者遗漏，欢迎反馈。对于无法/可选MITM的hostname都特别做了“如开启可自行添加主机名”提示，如果提示后面没有标注主机名则包含所有主机名，否则只包含提示语后面的主机名。
 #############################################
@@ -29,7 +29,7 @@
 #############################################
 
 [MITM]
-hostname = midc.cdn-static.abchina.com.cn, enjoy.cdn-static.abchina.com, pss.txffp.com, 62578.activity-12.m.duiba.com.cn, ecard.shenzhentong.com, ccmsupport-sz.tenpay.com, otheve.beacon.qq.com, www.tailgdd.com, cds.wifi188.com, home.mi.com, ocrifs.ejoy.sinopec.com, ne.gdsz.sinopec.com, a.sinopecsales.com, webappcfg.paas.cmbchina.com, mbmodule-openapi.paas.cmbchina.com, mlife.jf365.boc.cn, m.client.10010.com, m1.ad.10010.com, res.mall.10010.cn, cloud.189.cn, zt-app.go189.cn, app.10099.com.cn, e.weather.com.cn, zgrb.epicc.com.cn, sichuan.95504.net, app-gw-link.ztehome.com, gha.ghac.cn, dss0.bdstatic.com, tb1.bdstatic.com, tb2.bdstatic.com, ss0.bdstatic.com, gss0.bdstatic.com, newclient.map.baidu.com, gw.alicdn.com, img.alicdn.com, spamblocker-api.zeekstudio.com
+hostname = midc.cdn-static.abchina.com.cn, enjoy.cdn-static.abchina.com, pss.txffp.com, 62578.activity-12.m.duiba.com.cn, ecard.shenzhentong.com, ccmsupport-sz.tenpay.com, otheve.beacon.qq.com, www.tailgdd.com, cds.wifi188.com, home.mi.com, ocrifs.ejoy.sinopec.com, ne.gdsz.sinopec.com, a.sinopecsales.com, webappcfg.paas.cmbchina.com, mbmodule-openapi.paas.cmbchina.com, mlife.jf365.boc.cn, m.client.10010.com, m1.ad.10010.com, res.mall.10010.cn, cloud.189.cn, zt-app.go189.cn, app.10099.com.cn, e.weather.com.cn, zgrb.epicc.com.cn, sichuan.95504.net, app-gw-link.ztehome.com, smsp.epicc.com.cn, dss0.bdstatic.com, tb1.bdstatic.com, tb2.bdstatic.com, ss0.bdstatic.com, gss0.bdstatic.com, newclient.map.baidu.com, gw.alicdn.com, img.alicdn.com, spamblocker-api.zeekstudio.com
 
 [Rule]
 # >>>>>>>>>>>>>>> ✅ 自用补充添加 ✅ <<<<<<<<<<<<<<
@@ -67,6 +67,11 @@ AND, ((PROTOCOL, STUN), (DOMAIN-KEYWORD, bilibili.)), REJECT
 ^https?:\/\/ss0\.bdstatic\.com/.+?_\d{3}_\d{4}\.jpg reject-200
 ^https?:\/\/gss0\.bdstatic\.com\/.+?\/static\/wiseindex\/img\/bd_red_packet\.png reject-img
 
+# >>>>>>>>>>>>>>> ✅ C ✅ <<<<<<<<<<<<<<
+# > 车主惠(洗车网页)
+# hostname = smsp.epicc.com.cn
+^https?:\/\/smsp\.epicc\.com\.cn\/branches\/webpage\/webpage\/center_xjg\/dist\/mobile\/wechat\/static\/img\/friendlove2.bf388aa5\.png url reject
+
 # >>>>>>>>>>>>>>> ✅ D ✅ <<<<<<<<<<<<<<
 # > 钉钉
 # hostname = gw.alicdn.com, img.alicdn.com
@@ -76,7 +81,7 @@ AND, ((PROTOCOL, STUN), (DOMAIN-KEYWORD, bilibili.)), REJECT
 # >>>>>>>>>>>>>>> ✅ G ✅ <<<<<<<<<<<<<<
 # > 广汽本田
 # hostname = gha.ghac.cn
-^https?:\/\/gha\.ghac\.cn\:8081\/base\/app\/api\/ad\/query\?adType=1 reject-dict
+#^https?:\/\/gha\.ghac\.cn\:8081\/base\/app\/api\/ad\/query\?adType=1 reject-dict
 
 # >>>>>>>>>>>>>>> ✅ M ✅ <<<<<<<<<<<<<<
 # > 米家
