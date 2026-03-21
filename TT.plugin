@@ -6,7 +6,7 @@
 #!system_version = 
 #!loon_version = 3.2.4(787)
 #!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Advertising.png
-#!date=2026-03-21 20:41:06
+#!date=2026-03-21 21:02:06
 #!support=支持多款款APP/小程序
 #!remark=下方的所有规则都标注了对应的hostname，可能存在错误或者遗漏，欢迎反馈。对于无法/可选MITM的hostname都特别做了“如开启可自行添加主机名”提示，如果提示后面没有标注主机名则包含所有主机名，否则只包含提示语后面的主机名。
 #############################################
@@ -29,7 +29,7 @@
 #############################################
 
 [MITM]
-hostname = midc.cdn-static.abchina.com.cn, enjoy.cdn-static.abchina.com, pss.txffp.com, 62578.activity-12.m.duiba.com.cn, ecard.shenzhentong.com, ccmsupport-sz.tenpay.com, otheve.beacon.qq.com, www.tailgdd.com, cds.wifi188.com, home.mi.com, ocrifs.ejoy.sinopec.com, ne.gdsz.sinopec.com, a.sinopecsales.com, webappcfg.paas.cmbchina.com, mbmodule-openapi.paas.cmbchina.com, mlife.jf365.boc.cn, m.client.10010.com, m1.ad.10010.com, res.mall.10010.cn, cloud.189.cn, zt-app.go189.cn, app.10099.com.cn, e.weather.com.cn, zgrb.epicc.com.cn, sichuan.95504.net, app-gw-link.ztehome.com, smsp.epicc.com.cn, dss0.bdstatic.com, tb1.bdstatic.com, tb2.bdstatic.com, ss0.bdstatic.com, gss0.bdstatic.com, newclient.map.baidu.com, gw.alicdn.com, img.alicdn.com, spamblocker-api.zeekstudio.com, t.me
+hostname = midc.cdn-static.abchina.com.cn, enjoy.cdn-static.abchina.com, pss.txffp.com, 62578.activity-12.m.duiba.com.cn, ecard.shenzhentong.com, ccmsupport-sz.tenpay.com, otheve.beacon.qq.com, www.tailgdd.com, cds.wifi188.com, home.mi.com, ocrifs.ejoy.sinopec.com, ne.gdsz.sinopec.com, a.sinopecsales.com, webappcfg.paas.cmbchina.com, mbmodule-openapi.paas.cmbchina.com, mlife.jf365.boc.cn, m.client.10010.com, m1.ad.10010.com, res.mall.10010.cn, cloud.189.cn, zt-app.go189.cn, app.10099.com.cn, e.weather.com.cn, zgrb.epicc.com.cn, sichuan.95504.net, app-gw-link.ztehome.com, smsp.epicc.com.cn, dss0.bdstatic.com, tb1.bdstatic.com, tb2.bdstatic.com, ss0.bdstatic.com, gss0.bdstatic.com, newclient.map.baidu.com, gw.alicdn.com, img.alicdn.com, spamblocker-api.zeekstudio.com
 
 [Rule]
 # >>>>>>>>>>>>>>> ✅ 自用补充添加 ✅ <<<<<<<<<<<<<<
@@ -115,10 +115,6 @@ IP-CIDR, 95.161.76.100/31,REJECT-NO-DROP, no-resolve
 
 # >>>>>>>>>>>>>>> ✅ T ✅ <<<<<<<<<<<<<<
 
-# > Turrit功能增强
-# hostname = t.me
-https?:\/\/t.me\/(.+) turrit://resolve?domain=$1 307
-
 # > 腾讯乘车码微信小程序
 # hostname = ccmsupport-sz.tenpay.com
 # 感谢【jinlvei】分享
@@ -130,7 +126,7 @@ https?:\/\/t.me\/(.+) turrit://resolve?domain=$1 307
 
 # > 台铃智能 开屏广告
 # hostname = www.tailgdd.com
-^https?:\/\/www\.tailgdd\.com\/v8\/smart\/app\/config\/get reject-dict
+#^https?:\/\/www\.tailgdd\.com\/v8\/smart\/app\/config\/get reject-dict
 
 # >>>>>>>>>>>>>>> ✅ W ✅ <<<<<<<<<<<<<<
 # > WIFI万能钥匙
