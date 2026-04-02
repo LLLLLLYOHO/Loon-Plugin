@@ -6,7 +6,7 @@
 #!system_version = 
 #!loon_version = 3.2.4(787)
 #!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Advertising.png
-#!date=2026-04-02 21:47:06
+#!date=2026-04-02 22:07:06
 #!support=支持多款款APP/小程序
 #!remark=下方的所有规则都标注了对应的hostname，可能存在错误或者遗漏，欢迎反馈。对于无法/可选MITM的hostname都特别做了“如开启可自行添加主机名”提示，如果提示后面没有标注主机名则包含所有主机名，否则只包含提示语后面的主机名。
 #############################################
@@ -106,6 +106,7 @@ IP-CIDR, 95.161.76.100/31,REJECT-NO-DROP, no-resolve
 ^https:\/\/pss\.txffp\.com\/piaogen\/images\/invoiceEmailAdvert\/0f2b2b78353c4831bbab24430d59685c\.png reject
 ^https:\/\/pss\.txffp\.com\/piaogen\/images\/invoiceEmailAdvert\/ee8e954f6d10454692b6e67128e119ed\.png reject
 ^https:\/\/pss\.txffp\.com\/piaogen\/images\/invoiceEmailAdvert\/8125d0c985584e51866f53d4a2f62c05\.png reject
+^https:\/\/pss\.txffp\.com\/piaogen\/images\/invoiceEmailAdvert\/4a255512735c41f4b37bed0a2279845f\.png reject
 #票根  首页中间抽奖跳转链接  - 62578.activity-12.m.duiba.com.cn
 ^https:\/\/62578\.activity-12\.m\.duiba\.com\.cn\/autoLogin\/autologin reject
 
